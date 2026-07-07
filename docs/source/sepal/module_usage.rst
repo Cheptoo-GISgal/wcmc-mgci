@@ -1,61 +1,56 @@
-Module User Interface
-=====================
 
-
-The SEPAL interface and the SEPAL-SDG 15.4.2 :sub:`beta` module
----------------------------------------------------------------
+The SEPAL interface and the SEPAL-SDG 15.4.2
+============================================
 
 New SEPAL users are recommended to look over the interface and familiarize themselves with the SEPAL interface, main tools,functionalities and workflows. A detailed description of the features can be consulted in the `SEPAL documentation <https://docs.sepal.io/en/latest/setup/presentation.html#sepal-interface>`_.
 
 
 Setting up a SEPAL Instance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SEPAL-applications such as the SEPAL-SDG 15.4.2 :sub:`beta` make use of instances (computational/processing units); running them will use your SEPAL computing resources.
 
-Selecting an app automatically initiates the smallest instance to run the SEPAL sandbox. However, in some cases, especially where more powerful processing is required, you might need larger instances. For this reason, you may need to manually set up a larger SEPAL instance before running SEPAL-SDG 15.4.2 :sub:`beta`. To manually set-up an instance;
+Some applications in SEPAL make use of instances to run analyses ; running them will use your SEPAL computing resources. Selecting an app automatically initiates the process , starting the smallest instance to run the SEPAL sandbox. However, in some cases, especially where more powerful processing is required, you might need larger instances. For this reason, you may need to manually set up a larger SEPAL instance before running the modules. To set up an instance :
 
 1. Go to the `SEPAL terminal <https://docs.sepal.io/en/latest/setup/presentation.html#terminal>`_ (blue icon in the left panel in the image below) and wait for the instance selector to start.
-
 .. image:: ../_static/sepal/setting_instance.PNG
    :align: center
-   :width: 600
+   :width: 500
    :alt: Setting_instances
 
-2. Type the instance name ( e.g. **t1**, **m2** or **m4** . In our case since computation especially for larger countries are carried out in GEE ,a smaller instance like *t1* should suffice), then press **ENTER**.
+2. Type the instance name e.g. t1 , m2 or m4 then press ENTER.
 3. Wait for the instance to finish loading.
-4. Once completed, go back to the dashboard of the application and launch your app, this will automatically use the instance you have set.
+4. Once completed, go back to the dashboard of the application to launch your app. It will automatically use the instance you have set.
 
-Accessing SEPAL-SDG 15.4.2 :sub:`beta`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**SEPAL SDG 15.4.2 doesn't require any additional instances to run**.
 
-To access the the SEPAL-SDG 15.4.2 :sub:`beta` module use the `apps tab <https://docs.sepal.io/en/latest/setup/presentation.html#apps-tab>`_ and navigate through the list of apps until you find the module (alternatively, you can type in the search box "SEPAL-SDG 15.4.2"). Once you have found it, click over the app drawer and wait patiently until SEPAL-SDG 15.4.2 :sub:`beta` module is displayed (it may take a few minutes). 
+Accessing SEPAL-SDG 15.4.2 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To open the SEPAL-SDG 15.4.2 module , click on the **apps tab** and search for the SDG 15.4.2 module among the apps ,alternatively, you can type in the search box "SDG 15.4.2". Click on the app drawer and wait a few minutes for the module to load. 
 
 .. image:: ../_static/sepal/accessing_sepal_module.png
    :align: center
    :width: 1000
    :alt: Accessing_module
 
-The module should look like the image below. As with any other SEPAL module, SEPAL-SDG 15.4.2 :sub:`beta` is divided into two main sections:
+The module's interface is divided into two main sections as shown below:
 
-- **Process drawers**: Located on the top left of the interface,this is where you find the processing steps to accomplish the goal of the module. In SEPAL-SDG 15.4.2 :sub:`beta`, this is composed of four processing steps: Area of Interest; Land Cover Settings; Indicator Settings and Results.
+- **Process drawers**: Located on the top left of the interface , the process drawers contain the processing steps to run the module. In SEPAL-SDG 15.4.2 , this is composed by 4 processing steps: Area of interest; Land cover settings; Indicator settings and Results.
 
-- **Help drawers**: Located just below the process drawers,the help drawers describes the tool, its objectives and gives a background on its development. In SEPAL-SDG 15.4.2 :sub:`beta`, the Help drawer is composed of the source code (the module was developed under a MIT license, which means that the development is freely accessible, and the code is public in GitHub); the Wiki (the latest documentation on the tool) and the Bug report (use this section to report any unexpected results or behavior. To do so, please follow the `contribution guidelines <https://github.com/dfguerrerom/sepal_mgci/blob/master/CONTRIBUTE.md>`_.)
+- **Help drawers**: Located just below the process drawers , they describe the tool, its objectives and give a background about its development. They also detail the source code (the module was developed under a MIT license, which means that the module is freely accessible, and the code is hosted publicly in GitHub); the Wiki (the latest documentation on tool)  ,the bug report (report of unexpected results or behavior.) and the tasks runner (runs larger processing elements). More on tasks will be elaborated in future sections.
 
-.. image:: ../_static/sepal/module_interface.PNG
+.. image:: ../_static/sepal/accessing_sepal_module.png
    :align: center
-   :width: 1100
-   :alt: MGCI module interface
+   :width: 1000
+   :alt: Accessing_module
 
 
+Personalising SEPAL-SDG 15.4.2 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Personalising SEPAL-SDG 15.4.2 :sub:`beta`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SEPAL-SDG 15.4.2 allows users to personalize its appearance to suit their preferences.
 
-SEPAL includes functionalities for users to personalize the appearance of the module to their liking.
-
-**Theme customization:**
-
-SEPAL SDG 14.4.2 :sub:`beta` allows users to choose between a dark or light theme. To change the theme, click the light mode/dark mode icon (highlighted) at the top ribbon of the interface.
+**Theme customisation:**
+Users can choose between a dark or light theme. To change the theme, click the theme icon , located at the bottom left panel , below the help drawers .The application will need to be restarted to apply the changes.
 
 .. image:: ../_static/sepal/theme_customization.PNG
    :align: center
@@ -65,71 +60,64 @@ SEPAL SDG 14.4.2 :sub:`beta` allows users to choose between a dark or light them
 
 **Language selection:**
 
-SEPAL-SDG 15.4.2 :sub:`beta` is currently only available in English. New language versions will be made available soon. 
+SEPAL-SDG 15.4.2 is currently only available in English. New language versions will be made available soon. 
 
 
 
 Calculating SDG Indicator 15.4.2
 --------------------------------
 
-Conceptual Framework
+Conceptual framework
 ^^^^^^^^^^^^^^^^^^^^
-This section will guide you through the computational steps of SDG Indicator 15.4.2.
+This section covers the  rationale behind SDG Indicator 15.4.2 computation. Simply put ,the indicator monitors mountain ecosystem health by assessing changes in green cover and land cover across mountain bioclimatic belts using four key inputs: land cover data, a digital elevation model, a mountain area map, and a national administrative boundary layer.
 
-With the main goal of assessing the changes in land cover in mountain areas by bioclimatic belts,the algorithm works using land cover data, a digital elevation model, a mountain area map and a national administrative boundary layer.
+Overview of Sub-Indicator 15.4.2a : Mountain Green Cover Index (MGCI)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Overview of Sub-Indicator 15.4.2a : (Mountain Green Cover Index)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Sub-indicator 15.4.2a: Mountain Green Cover Index (MGCI)**, measures the extent of changes in green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – occurring in  mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year.
-
-The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems and is defined as follows:
+**Sub-indicator 15.4.2a, Mountain Green Cover Index (MGCI)**, is designed to measure the extent and changes of green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – in mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year. The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems. 
 
 .. math::
     
-    MGCI = (Mountain Green Cover Area n) / (Total Mountain Area)
+    MGCI = (Mountain Green Cover Area n)/(Total Mountain Area)
 
 Where: 
 
-- **Mountain Green Cover Area n** = Sum of areas (in km :sup:`2`) covered by (1) tree-covered areas, (2) croplands,(3) grasslands, (4) shrub-covered areas and (5) shrubs and/or herbaceous vegetation, aquatic or regularly flooded classes in the reporting period *n*
-- **Total mountain area** = Total area of mountains (in km :sup:`2`). (In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).)
+- **Mountain Green Cover Area n** = Sum of areas (in km2) covered by (1) tree-covered areas, (2) croplands,(3) grasslands, (4) shrub-covered areas and (5) shrubs and/or herbaceous vegetation, aquatic or regularly flooded classes in the reporting period n 
+- **Total mountain area** = Total area of mountains (in km2). In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).
 
-Overview of Sub-Indicator 15.4.2b (Proportion of Degraded Mountain Land)
+Overview of Sub-Indicator 15.4.2b : Proportion of degraded mountain land
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Sub-indicator 15.4.2b, Proportion Degraded Mountain Land**, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. 
-
-Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES).
+**Sub-indicator 15.4.2b, Proportion of degraded mountain land**, is designed to monitor the extent of degraded mountain land as a result of land cover change in a given country and for given reporting year. Similarly to sub-indicator "trends in land cover" under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The indicator adopts the definition of degradation established by the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES) in its computation.
 
 .. math::
 
-	Proportion of Degraded Mountain Land = (Degraded Mountain Area n) / (Total Mountain Area)* 100
+	Proportion Of Degraded Mountain Land = (Degraded Mountain Area n) / (Total Mountain Area) * 100
 
 Where:
 
-- **Degraded mountain area** = Total degraded mountain area (in km :sup:`2`) in the reporting period *n*. This is, the sum of the areas where land cover change is considered to constitute degradation from the baseline period. Degraded mountain land will be assessed based on a land cover transition matrix in :ref:`Annex <Annex>`.
-- **Total mountain area** = Total area of mountains (in km :sup:`2`). In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).
+- **Degraded mountain area n** = Total degraded mountain area (in km2) in the reporting period n. This is, the sum of the areas where land cover change is considered to constitute degradation from the baseline period. Degraded mountain land will be assessed based on the land cover transition matrix in Annex 1.
+- **Total mountain area** = Total area of mountains (in km2). In both the numerator and denominator, mountain area is defined according to UNEP-WCMC (2002).
 
 **Disaggregation:**
 
-In the computation,sub-indicator 15.4.2a is disaggregated by the 10 SEEA classes based on UN Statistical Division (2014).
-
-Both sub-indicators  A and B are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011).  Those values are reported both as proportions (percent) and area (in square kilometres)
+Both of these sub-indicators are disaggregated by mountain bioclimatic belts as defined by Körner et al. (2011). In addition, land cover in sub-indicator 15.4.2a is
+disaggregated into the 10 SEEA classes based on UN Statistical Division (2014).  Those values are reported both as proportions (percent) and area (in square kilometres)
 
 More detailed information on the overall conceptual framework of the indicator is available in the `indicator's metadata <https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf>`_.
 
-Let’s us now  delve into the computation of SDG 15.4.2.We will do this step-by-step using the example of Nepal.
 
-Computing SDG 15.4.2
---------------------
+**To illustrate, we will compute SDG 15.4.2 using Nepal as an example. Throughout the tutorial , we will assume all the default options and datasets available in the application.**
+
+
 Defining the Area of Interest (AoI)
 -----------------------------------
 
-The calculation of the SDG 15.4.2 is restricted to a specific Area of Interest (AoI) defined by the user. In this first step, you will have the option to choose between the predefined list of administrative layers or to use a custom dataset. 
+The calculation of the SDG 15.4.2 is restricted to a specific area of interest defined by the user. In this first step, you will have the option to choose between a predefined list of administrative layers or to use a custom dataset to delineate the computational area.
 
-**1.	Click on the Area of Interest Drawer in the left panel menu to define your AoI.** 
+**1. Click on the Area of Interest Drawer to define your AOI.** 
 
-A pop-up displays the available options to set your AoI,namely: 
+A pop-up will display the following available options to set your AOI: 
 
 - Administrative definitions
 - Custom layers
@@ -140,13 +128,10 @@ A pop-up displays the available options to set your AoI,namely:
    :alt: Defining_AOI
 
 
-**Administrative Definitions**
+**2. The Administrative definitions option presents the default administrative boundary dataset (GAUL,2015). Users have three scale options to choose from ; country , sub-national level 1 (provinces, states or regions) and sub-national level 2 (district , counties or municipalities ).To define the Area of Interest using this option, :**
 
-
-**2.The Administrative definitions option uses the predifined administrative boundary layers available by default in the module.(FAO GAUL,2015),To define the Area of Interest using this option:**
-
-- Select **Country** under AOI selection method.
-- In the dropdown list that will appear, select the country or territory in which you want to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below;
+- Select **Country** under Administrative definitions. 
+- In the dropdown list , select the country or territory to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below.
 
 .. image:: ../_static/sepal/aoi_definition_country.PNG
    :align: center
@@ -154,16 +139,17 @@ A pop-up displays the available options to set your AoI,namely:
    :alt: selecting_nepal
 
 
-- Clicking on the :guilabel:`Select Area of Interest (AOI)`  will display a map with your selection. A corresponding legend is also displayed. The algorithm automatically generates a legend based on the mountain bioclimatic belt classes.The area for each of the bioclimatic belts is also aggregated for each bioclimatic belt. 
+- Clicking on the :guilabel:`Select Area of Interest (AOI)` will display your selection on the map area alongside a corresponding legend.The algorithm automatically generates a legend based on the four mountain bioclimatic belt classes and the area for each as defined in the global mountain map developed by FAO to compute this indicator.
 
 .. image:: ../_static/sepal/aoi_defined.PNG
    :align: center
    :width: 700
    :alt: displaying_nepal
 
-.. warning:: The  administrative boundaries available on SEPAL-SDG 15.4.2 :sub:`beta` are extracted from FAO GAUL (Global Administrative Unit Layers) 2015 data set. The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
+.. warning:: The  administrative boundaries available SEPAL-SDG 15.4.2 are extracted from the FAO Global Administrative Unit Layers (GAUL,2015) dataset. The designations employed in the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the United Nations Secretariat concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
 
-**Custom Geometries**
+
+** Using Custom Geometries**
 
 **3.The Custom layers option allow users to use their own national administrative boundary layers.** To define the Area of Interest using your own custom administrative boundary layer you have two options: use a vector file that you have previously uploaded in GEE as an asset (GEE asset name option), or use a vector file that you have previously uploaded in your SEPAL environment (Vector file option).
 
