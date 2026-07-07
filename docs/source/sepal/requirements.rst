@@ -116,7 +116,7 @@ When computing SDG 15.4.2, land cover maps are uploaded as raster files , made a
 Creating an Image Collection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An image collection is a stack or sequence of images ,typically used to organize vast datasets like Landsat or MODIS, allowing you to filter, process, and analyze petabytes of geospatial data simultaneously across large areas and timeframes.
+An image collection is a stack or sequence of images ,typically used to organize vast datasets like Landsat or MODIS, allowing you to filter, process, and analyze large quantities of geospatial data simultaneously across large areas and timeframes.
 
 To create an Image Collection;
 
@@ -127,6 +127,7 @@ To create an Image Collection;
    :width: 300
    :alt: Image-collection
 
+
 2. This will open the image collection constructor that will first prompt you to name your image collection as shown below:
 
 .. image:: ../_static/sepal/naming_image_collection.png
@@ -134,12 +135,14 @@ To create an Image Collection;
    :width: 400
    :alt: Naming Image-collection
 
-3. Once the image collection is created, you can load it by pasting an Earth Engine asset ID into the Image Collection constructor (Ensure the **Edit** button is on) or by simply dragging the individual assets to the image collection in the assets list as shown below:
+
+3. Once the image collection is created, you can load it by pasting an Earth Engine asset ID into the Image Collection constructor (Ensure the **Edit** button is on) or by simply dragging individual assets to the image collection in the assets list as shown below:
 
 .. image:: ../_static/sepal/naming_image_collection.png
    :align: center
-   :width: 500
+   :width: 400
    :alt: Creating Image-collection
+
 
 4. Repeat this for each asset. Clicking on the Image Collection(in the asset list) should now show all the images that are contained in that collection and should now be ready to be used in your analysis or visualization.
  
@@ -149,9 +152,9 @@ To create an Image Collection;
    :alt: Image-collection-result
 
 
-Uploading  Table Files
-~~~~~~~~~~~~~~~~~~~~~~
-Tabular data can be uploaded into Google Earth Engine as comma-separated values (CSV) or Javascript Object Notation(JSON) files :code:`.csv`, or :code:`.json`). To upload a tabular files do the following:
+Uploading  Tabular Files
+~~~~~~~~~~~~~~~~~~~~~~~~
+Tabular data can be uploaded into Google Earth Engine as comma-separated values (CSV) or Javascript Object Notation(JSON) files :code:`.csv`, or :code:`.json`). To upload tabular files:
 
 1. Select New > **csv file upload**. 
 2. In the pop-up window that appears, select the file you want to upload from your computer 
@@ -163,7 +166,7 @@ Tabular data can be uploaded into Google Earth Engine as comma-separated values 
 
 
 .. tip::
-   Now that all your files are uploaded in GEE, you can now access and use your assets in SEPAL. As you have already established a connection between your GEE and SEPAL accounts, all your assets are synced and available for you in SEPAL. You will be able to select them from the dropdown or copy/paste them directly from GEE when prompted in SEPAL-SDG 15.4.2 :sub:`beta`
+   Once uploaded in GEE , and the connection between the two accounts established , the assets are available and accessible from SEPAL. They can be selected from the dropdown or  by pasting the assets ID directly from GEE when prompted in SEPAL-SDG 15.4.2 .
 
 
 .. _Vector_File_Manager:
@@ -178,7 +181,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
    
 .. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
-   :width: 700
+   :width: 400
    :alt: Vector File Manager Interface
 
 3. Clicking on the drop down arrow allows you to select the table type.(Accepted formats are shapefiles :code:`.shp` and table file :code:`.csv`)
@@ -186,15 +189,17 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 
 .. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
-   :width: 800
+   :width: 400
    :alt:   Uploading Vector Files.
+
 
 5. The vector file manager notifies you when the importation is complete and shows its location as follows:
    
 .. image:: ../_static/sepal/importation_complete.PNG
    :align: center
-   :width: 1200
+   :width: 1400
    :alt: Vector File Upload Notification
+
 
 6. To locate the file you just uploaded into SEPAL, Click on the Module_Results > AOI in the Home page:
    
