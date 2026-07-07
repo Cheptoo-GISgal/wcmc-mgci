@@ -189,7 +189,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 
 .. image:: ../_static/sepal/uploading_csv.PNG
    :align: center
-   :width: 400
+   :width: 300
    :alt:   Uploading Vector Files.
 
 
