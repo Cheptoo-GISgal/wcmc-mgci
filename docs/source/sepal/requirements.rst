@@ -3,112 +3,106 @@ Module Requirements
 
 Initial Setup
 ^^^^^^^^^^^^^
-SEPAL is closely linked to Google Earth Engine (GEE), a Google-powered Earth-observation cloud-computing platform, as it integrates many of its functionalities. Consequently,to run SEPAL-SDG 15.4.2 :sub:`beta` you will need to have **connected SEPAL and GEE accounts**.
+SEPAL is closely linked to Google Earth Engine (GEE), a Google-powered Earth-observation cloud-computing platform, as it is built leveraging many of its functionalities. Therefore,to run SEPAL-SDG 15.4.2 , you will need to have **connected SEPAL and GEE accounts**. 
 
-Before getting started with SEPAL-SDG 15.4.2 :sub:`beta` you need:
+- To **Create a SEPAL account** please follow the `registration steps described here <https://docs.sepal.io/en/latest/setup/register.html#sign-up-to-sepal>`_ and then familiarize yourself with the tool by exploring its interface.
+- To **Create a Google Earth Engine (GEE) account** please follow these `steps <https://docs.sepal.io/en/latest/setup/gee.html#create-a-gee-account>`_ and don't forget to `initialize the home folder <https://docs.sepal.io/en/latest/setup/gee.html#initialize-the-home-folder>`_.
+- To **Connect your SEPAL and GEE accounts** follow the `instructions described here <https://docs.sepal.io/en/latest/setup/gee.html#connection-between-gee-and-sepal>`_.
 
-- To **Create a SEPAL account** , please follow the `registration steps described here <https://docs.sepal.io/en/latest/setup/register.html#sign-up-to-sepal>`_ and then familiarize yourself with the tool by exploring its interface.
-- To **Create a Google Earth Engine (GEE) account** , please follow these `steps <https://docs.sepal.io/en/latest/setup/gee.html#create-a-gee-account>`_ and don't forget to `initialize the home folder <https://docs.sepal.io/en/latest/setup/gee.html#initialize-the-home-folder>`_.
-- To **Connect your SEPAL and GEE accounts**, follow the `instructions described here <https://docs.sepal.io/en/latest/setup/gee.html#connection-between-gee-and-sepal>`_
 
 
 Data Requirements
 ^^^^^^^^^^^^^^^^^
-SDG Indicator 15.4.2 requires several spatial data inputs to be computed namely :
+SDG Indicator 15.4.2 requires several spatial data inputs to be computed. These include :
 
 - **A Mountain Area Map** 
   
-For the purposes of standardization and international comparability of indicators values, SDG Indicator 15.4.2 adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as ‘Kapos mountain classes’), based on elevation, slope and local elevation ranges parameters. This mountain area is subdivided into bioclimatic belts (Nival, Alpine, Montane, and Remaining Mountain Area) based on average temperatures as defined by Körner et al. (2011). A global mountain area map based on these definitions and methodologies has been developed by FAO and is used by default by SEPAL-SDG 15.4.2 :sub:`beta` as part of the computations. 
+For standardization and international comparability of indicators values, SDG Indicator 15.4.2 adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as ‘Kapos mountain classes’), based on elevation, slope and local elevation ranges parameters. This mountain area is subdivided into bioclimatic belts (Nival, Alpine, Montane, and Remaining Mountain Area) based on average temperatures as defined by Körner et al. (2011). A global mountain area map based on these definitions and methodologies has been developed by FAO and is used by default by SEPAL-SDG 15.4.2 in the computations. 
 
 - **A National Administrative Boundary for the country of interest** 
   
-SEPAL-SDG 15.4.2 :sub:`beta` has been conceived to facilitate the computation of SDG Indicator 15.4.2 at country level. To facilitate this , SEPAL-SDG 15.4.2 :sub:`beta` uses a default global data source for national boundaries - the FAO GAUL Global Administrative Unit Layers 2015 data set. However, the tool also allows national agencies to use their own national country boundary layer if available. 
+SEPAL-SDG 15.4.2 has been designed to facilitate the computation of SDG Indicator 15.4.2 at national level. The FAO Global Administrative Unit Layers (GAUL) 2015 data set is the default source for national boundaries. Alternatively,national agencies can use their own national country boundary layer if available. 
 
 - **A collection of Land Cover Maps for the country of interest** 
   
 Land cover maps represent spatially the physical coverage of the Earth's surfacev categorized into different types (classes) e.g. forests, grasslands, croplands, lakes, wetlands. This data serves different functions for SDG Indicator 15.4.2: 
   
-**In Sub-Indicator 15.4.2a**, land cover is used to categorize land into green and non-green cover areas. 
+- **In Sub-Indicator 15.4.2a**, land cover is used to categorize land into green and non-green cover areas. 
   
-**In Sub-Indicator 15.4.2b**, land cover is used to identify areas where changes in the type of land cover may indicate a decline or loss of biodiversity, mountain ecosystem functions or services that are considered desirable in a local or national context. 
+- **In Sub-Indicator 15.4.2b**, land cover is used to identify areas where changes in the type of land cover may indicate a decline or loss of biodiversity, mountain ecosystem functions or services that are considered desirable in a local or national context. 
  
-The collection of land cover maps to compute this indicator should be available from the year **2000**. SEPAL SDG 15.4.2 :sub:`beta` facilitates national authorities to use relevant national or regional land cover datasets. 
-Similarly, SEPAL-SDG 15.4.2 :sub:`beta` provides access to default land cover datasets, selected by FAO to compute the indicator when national datasets are not available see the :ref:`Data Sources section <DataSources>`
-  
-.. Note:: 
-   Country-defined datasets must be made available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ for SEPAL-SDG 15.4.2  :sub:`beta`  to access it. Creating Image Collections in GEE will be demonstrated in the next section of the tutorial. 
- 
+The collection of land cover maps to compute this indicator should be available from the year **2000**. Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 avails the default land cover maps to compute the indicator (see Data Sources section). Additionally, it allows national authorities to use relevant national or regional land cover datasets. These datasets should also be available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ in order to allow SEPAL-SDG 15.4.2 to access them. The next section of the tutorial will explain how this is done.  
+
 
 
 Uploading files into Google Earth Engine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Once you have created accounts in both SEPAL and GEE and linked them accordingly,you will now learn how to upload files into GEE.
-GEE accepts a number of data formats namely: shapefiles, raster images,and CSV tables. This section will demonstrate the uploading of the different data types into the platform.
+GEE allows users to upload several types of data including shapefiles, raster images, image collections, and CSV tables. This section explains how to upload each of these into the platform.
 
-1. To upload files,go to the **Assets** tab in the top left panel in the **Earth Engine Code Editor** page. Clicking on it will open the **Asset Manager** as shown below:
+
+1. To upload files,go to the **Assets** tab in the top-left panel in the **Earth Engine Code Editor** page. Clicking on it will open the **Asset Manager** as shown below:
 
 .. image:: ../_static/sepal/uploading_data.PNG
    :align: center
    :width: 900
    :alt: GEE_Interface
 
-2. Clicking on the  **New** button will list the acceptable options, including **Raster** (Geotiffs or TFRecords), **Vector** (Shapefiles) and **Data tables** (CSV files), which will be described in the following subsections.
+2. Clicking the  **New** button will list the acceptable file options, including **Raster** (Geotiffs or TFRecords), **Vector** (Shapefiles) and **Data tables** (CSV files), which will be described in the following subsections.
+
 
 Uploading Vector Files
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. Note::
-   In SEPAL-SDG 15.4.2 :sub:`beta` custom country boundaries need to be uploaded in vector format.
+   In SEPAL-SDG 15.4.2 ,custom country boundaries need to be uploaded in vector format.
 
 
-1. To do so, choose the **Shapefiles** option in the drop-down list. A pop-up window will appear prompting you to navigate to the location of your data.
-2. Select the file you want to upload from your computer.You can either upload the vector data as a compressed file :code:`.zip` or :code:`.shp` .Remember that a :code:`.shp` file alone is not sufficient and must be accompanied with all the other files describing the vector data i.e. :code:`.shx`, :code:`.dbf` and :code:`.prj`.
+1.  In the **Earth Engine Code Editor**, click **New** and select **Shapefiles** to upload a custom country boundary in vector format. 
 
-.. imag ../_static/sepal/uploading_vector.PNG
+2. In the pop-up window, select the file you want to upload from your computer. Compatible formats include :code:`.shp`, :code:`.zip`, :code:`.dbf`, :code:`.prj`, :code:`.shx`, :code:`.cpg`, :code:`.fix`, :code:`.qix`, :code:`.sbn` or :code:`.shp.xml`; if you didn't compress the file, a :code:`.shp` alone is not sufficient and must be accompanied with other files describing the shape as in the example in the image below :
+
+.. image:: ../_static/sepal/uploading_vector.PNG
    :align: center
    :width: 400
    :alt: Vector_File
 
 Any file errors will be highlighted by the uploader, as in the example below:
 
-.. imag ../_static/sepal/vector_error_warning.PNG
+.. image:: ../_static/sepal/vector_error_warning.PNG
    :align: center
-   :width: 400
+   :width: 500
    :alt: Vector_Error
 
 3. Once all files are loaded correctly, the upload progress is displayed in the task manager. Typically this process takes a couple of minutes depending on the size of the dataset. The progress of the upload is displayed in the task manager as shown below:
 
-.. image../_static/sepal/uploading_progress.PNG
+.. image:: ../_static/sepal/uploading_progress.PNG
    :align: center
-   :width: 400
+   :width: 300
    :alt: vector_uploading_process
 
 4. Once completed,the uploaded assets will be listed in the Assets List under the Assets tab. If not displayed, click on the **Refresh** button.
 
-.. image../_static/sepal/vector_asset_list.PNG
+.. image:: ../_static/sepal/vector_asset_list.PNG
    :align: center
-   :width: 300
+   :width: 700
    :alt: Assets_listed
 
 5. Clicking on the asset will open an asset details window ; The asset is ready for use. You can now visualize, share or delete it accordingly.
 
-.. image../_static/sepal/asset_details_gee.PNG
+.. image:: /_static/sepal/asset_details_gee.PNG
    :align: center
-   :width: 800
+   :width: 900
    :alt: asset_popup
 
 
 Uploading Raster Files
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-When computing SDG 15.4.2, land cover maps are uploaded as raster files and  made available as `image collections <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be usable in SEPAL-SDG 15.4.2 :sub:`beta` . 
+When computing SDG 15.4.2, land cover maps are uploaded as raster files , made available as `image collections <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be usable in SEPAL-SDG 15.4.2 . 
 
 1. To upload the rasters, select **New > Image Upload**.
 
-2. In the pop-up window, select the file you want to upload from your computer (compatible formats include :code:`.tiff`, :code:`.tif`, :code:`.json`, :code:`.tfrecord` or :code:`.tfrecord.gz`; By default, the asset will be named after the basename.However,the name of your asset can be changed in the next text field.
-
-.. Note:: 
-   Please ensure that the name includes the reference year of the land cover map e.g Nepal_2000 for Nepal's landcover map for 2000.
+2. In the pop-up window, select the raster file (compatible formats include :code:`.tiff`, :code:`.tif`, :code:`.json`, :code:`.tfrecord` or :code:`.tfrecord.gz`. By default, the asset will be named after the basename; the name of your asset can be changed in the text field. When naming, it is good practice to include the reference year of the land cover map.
 
 .. image:: ../_static/sepal/uploading_rasters.PNG
    :align: center
@@ -118,10 +112,12 @@ When computing SDG 15.4.2, land cover maps are uploaded as raster files and  mad
 3. Repeat step 2 for each of the land cover maps.
 
 
+
 Creating an Image Collection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An Image Collection is a stack or sequence of images.Once all the land cover maps have been successfuly uploaded,we now need to create an image collection for the images to be usable in computation as explained earlier.
+An image collection is a stack or sequence of images ,typically used to organize vast datasets like Landsat or MODIS, allowing you to filter, process, and analyze petabytes of geospatial data simultaneously across large areas and timeframes.
+
 To create an Image Collection;
 
 1. Click on the **Assets Tab** and then New > **Image collection.**
