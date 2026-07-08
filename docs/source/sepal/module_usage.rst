@@ -296,28 +296,28 @@ Uploading a reclassification matrix
 
 Manually Reclassifying the land classes 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Directly specifying the reclassification rules by indicating the SEEA land cover equivalent (in the destination class column) for each of the land cover classes of your land cover map (in the original class column) as shown below:If need be,the information icon located at the tools ribbon upper right hand can be used to refer to the UN-SEAA classes .
-- After manually reclassifying your legend, you can use the save :guilabel:`💾` button located at the top of the table to save hte table as a CSV file, that can be used at a  future calculation instead of manually filling up the table again.
+- Directly specify the reclassification rules by matching each land cover class (original class column) to its SEEA equivalent (destination class column), as shown below. Click the information icon in the upper right of the tools ribbon to reference the UN-SEEA classes if needed..
+- Select the :guilabel:`💾` button located at the top of the table to save the table within SEPAL for future calculation.
 
 .. image:: ../_static/sepal/custom_reclassification_sub_a.PNG
    :align: center
    :width: 1000
    :alt: Manual reclassification.
 
-In our example, we will reclassify Nepal’s national land cover class using the following guide:
+For our example, we will reclassify Nepal’s national land cover class using the following guide:
 
 .. image:: ../_static/sepal/nepal_classification_guide.png
    :align: center
    :width: 700
    :alt: Reclassifation table_NEPAL
 
-- Once you have reclassified all the land classes for Sub-Indicator A, click on "Reclassify Land Cover for Sub-Indicator B"
+-Once all land classes have been reclassified , click on **Reclassify Land Cover for sub-indicator B** in the process drawer to proceed.
 
 Reclassifying your landcover map legend for sub-Indicator B computation.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This step allows you to reclassify the legend of your land cover map for computing Sub-Indicator B. 
 
-.. Note:: In contrast to Sub-Indicator A, the land cover legend used for the calculation of Sub-Indicator B does not necessarily have to be the 10 UN-SEEA classes. In this sub-indicator, the classification legend can be adapted to the national context to ensure that it adequately captures the key degradation and improvement transitions identified in the country. For instance, a given country may decide to differentiate "natural forests" from "tree plantations" in sub-indicator B. 
+.. note:: In contrast to sub-indicator A, national authorities have the liberty to use alternative land cover legends in the place of the default 10 UN-SEEA classes. Consequently ,the UN-SEEA legend can be adapted to the national context to ensure that it adequately captures the key degradation and improvement transitions identified in the country . For instance, a given country may decide to differentiate "natural forests" from "tree plantations" in sub-indicator B.
 
 For this reason, this step allows users to apply a new reclassification, or alternatively, use the same reclassification rules defined in Sub-Indicator A. In the latter case,you can access the the reclassification matrix you created and saved earlier by clicking the upload button amnd choosing the file. For both cases, the land cover reclassification rules must be a :code:`.CSV` file, following the same method as in the prior step.
 
@@ -329,11 +329,11 @@ Uploading a transition matrix for computing Sub-Indicator B
 
 .. important:: **This step should only be completed if you have provided different land cover reclassification rules for Sub-Indicator B in the prior step.** 
 
-The next step is to upload a land cover transition matrix, defining the transitions between the land cover classes.We will consider the transitions to be either **degraded** , **stable** or **improved** , consistent to the legend you have provided in the prior step. This will allow SEPAL-SDG 15.4.2 :sub:`beta` to compute this sub-indicator in the next processing steps. 
+The next step is to upload a land cover transition matrix, defining the transitions between the land cover classes .We will consider the transitions to be either **degraded** , **stable** or **improved** , consistent to the legend you have provided in the prior step. This will allow SEPAL-SDG 15.4.2 to compute this sub-indicator in the next processing steps. 
 
-Here again the transition matrix should have been previously uploaded in your SEPAL environment as a :code:`.CSV` file.Remember the transition matrix must include the following columns: from_code, to_code,from_name,to_name,impact_name and impact_code (indication of change between the land cover classes)
+As mentioned earlier , the transition file should have been previously uploaded in the SEPAL environment as a csv file, containing the following columns: **from_code**, **to_code**, **impact_code** and **impact_name** .The column names must match exactly. (indication of change between the land cover classes)
 
-Check the :ref:`Annex <Annex>` for the  transition matrix template.
+Check the :ref:`Annex <Annex>` for the transition matrix template.
 
 .. image:: ../_static/sepal/transition_file.PNG
    :align: center
@@ -342,37 +342,39 @@ Check the :ref:`Annex <Annex>` for the  transition matrix template.
 
 .. _Defaultlccustommatrix:
 
-Changing the default land cover transition matrix for computing Sub-Indicator B using the default global land cover data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As explained earlier,SEPAL-SDG 15.4.2 :sub:`beta` gives the users liberty to modify the land cover transition matrix even when the default landcover maps have been used. This capability allows national authorities to adapt the transition matrix to to their local context and consequently capture the main land degradation processes occurring in the country without needing to provide alternative land cover data.
+Modifying the default transition matrix for use with global land cover data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This can be done selecting :guilabel:`Yes` to the second question of the land cover dataset questionnaire, and then clicking on :guilabel:`Open Parameter Settings`.
+SEPAL-SDG 15.4.2 allows users to modify the default land cover transition matrix without providing a custom land cover map. This enables national authorities to adapt the transition matrix to their local context, better capturing the main land degradation processes occurring in the country while continuing to use the default global land cover data.
+
+
+- .This can be done selecting :guilabel:`Yes` to the second question of the land cover dataset questionnaire, and then clicking on :guilabel:`Open Parameter Settings`.
 
 .. image:: ../_static/sepal/default_lc_custom_tm.PNG
    :align: center
    :width: 900
    :alt: Reclassify table
 
-This will open a pop-up window including the default land cover transitions matrix, showing positive land cover transitions in green, negative in red, and stable/neutral transitions in blue. The matrix can be directly modified by clicking on each cell and changing the sign of the transition.
+- This will open a pop-up window including the default land cover transitions matrix, showing positive land cover transitions in green, negative in red, and stable/neutral transitions in blue. The matrix can be directly modified by clicking on each cell and changing the sign of the transition.
 
 .. image:: ../_static/sepal/transition_matrix_modify.PNG
    :align: center
    :width: 900
    :alt: Reclassify table
 
-Once finished, just click outside the window and move to the next processing step: **Indicators Settings.**
+- Once finished, click outside the window to move to the next processing step: **Indicators Settings.**
 
 .. warning::
+   Adapting the default land cover transition matrix when using the default global land cover data should be carefully considered. Decisions about which land cover transitions are linked to a degradation or an improvement process in the context of sub-indicator B should be made taking into account the expected change in biodiversity and the mountain ecosystem functions or services that are considered desirable in a local or national context. For these reasons, FAO recommends to consider as degradation all land cover transitions that involve changes from natural land cover types (such as forests, shrublands, grasslands, wetlands) to anthropogenic land cover types (artificial surfaces, cropland, pastures, plantation forests, etc.) as a general rule, given that land use change is known to be the primary driver of biodiversity loss (IPBES, 2019).
 
-   Adapting the default land cover transition matrix using the default global land cover data should be carefully considered. Decisions about which land cover transitions are linked to a degradation or an improvement process in the context of sub-indicator B should be made taking into account the expected change in biodiversity and the mountain ecosystem functions or services that are considered desirable in a local or national context. For these reasons, FAO recommends to consider as degradation all land cover transitions that involve changes from natural land cover types (such as forests, shrublands, grasslands, wetlands) to anthropogenic land cover types (artificial surfaces, cropland, pastures, plantation forests, etc.) as a general rule, given that land use change is known to be the primary driver of biodiversity loss (IPBES, 2019).
 
 .. _Indicator Settings:
 
 Indicators Settings
 -------------------
 
-Now that we have defined our area of interest and the land cover data to be used in the analysis, together with the land cover legend reclassification rules and associated transitions , click on the **Indicator Settings drawer** to set the parameters that the tool will base the computation on.
+Once the area of interest, land cover data, reclassification rules, and transition matrix have been configured,  click the **Indicator Settings**  in the process drawers to set the parameters required for the computation of both sub-indicators.
 
 .. image:: ../_static/sepal/defining_indicator_settings.PNG
    :align: center
@@ -380,19 +382,18 @@ Now that we have defined our area of interest and the land cover data to be used
    :alt: Reclassify table
 
 
-From here on, let’s tackle the sub-indicators individually.
+From here on, we will cover the sub-indicators individually.
 
 Defining parameters for Sub-indicator A: Mountain Green Cover Index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**1. Click on the add layer icon (highlighted below) to define the years for which the indicator will be calculated**
+**1. Click on the add layer icon (highlighted in red) to define the computational years**
 
 .. image:: ../_static/sepal/adding_reporting_years.PNG
    :align: center
    :width: 800
    :alt: Indicator settings
 
-**2. In the pop-up window that will appear you need to link each of the land maps (either the default ones or the custom ones that you may have uploaded in the prior steps) to the corresponding reference year of each map. You can report one or multiple years. To increase the number of years to be reported, just click on the + sign to define additional years that you need to report.** 
+**2. In the pop-up window, link each land cover map — whether default or custom — to its corresponding reference year. You can report on one or multiple years. To add additional reporting years, click the + button** 
 
 .. image:: ../_static/sepal/defining_reporting_years_subA.PNG
    :align: center
@@ -400,8 +401,7 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
    :alt: Reclassify table
 
 
-.. note:: Remember that reporting years for Sub-indicator A are **2000, 2005, 2010, 2015 and subsequently every 3 years (2018, 2021, 2024,...).** If you are using custom national land cover maps that are not annually updated and does not exactly match reporting years (for example, you may have a land cover map for 2004 instead of 2005), the tool will automatically interpolate values for the reporting years based on the years for which land cover data is available. 
-
+.. note::  The reporting years for sub-indicator A are every five years from the baseline i.e. 2000, 2005, 2010, 2015 and subsequently every three years (2018, 2021, 2024,...).If your custom national land cover maps are not annually updated and do not exactly match the reporting years — for example, if you have a land cover map for 2004 instead of 2005 — the tool will automatically interpolate values for the missing reporting years based on the available land cover data.
 
 .. image:: ../_static/sepal/multiple_years.PNG
    :align: center
@@ -409,14 +409,16 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
    :alt: Defining Multiple Years
 
 
-**3.	When finished, press OK. The list of reporting years will now be listed at the bottom of the Sub-Indicator A box.**
+**3. Click OK . The list of reporting years will now be listed at the bottom of the sub-Iidicator A box.**
 
 .. image:: ../_static/sepal/defining_years_subA.PNG
    :align: center
    :width: 1000
    :alt: Reclassify table
 
-4. SEPAL SDG 15.4.2 :sub:`beta` offers the following advanced options:
+ RECHECK from here
+
+4. SEPAL SDG 15.4.2  offers the following advanced options:
 
 .. image:: ../_static/sepal/advanced_settings.PNG
    :align: center
@@ -426,7 +428,6 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 - Using Real Surface Area methods instead of Planimetric options used by default by SEPAL SDG 15.4.2 :sub:`beta`.(For more on this check the indicator's metadata )
 - Running in GEE for large datasets(large datasets are automatically thrown into GEE for computation).This option should be chosen when there are computational time errors(usually associated with large datasets hence cannot be run on the fly).
 - Process scale:If this capability is activated,allows the user to define the computational scale. Remember,the scale chosen will affect the speed of computation( finer scales will take more time and vice versa) and the accuracy of the results.If this option is not chosen,computation will run at the scale of the input data.
-  
 
 Defining parameters for Sub-Indicator B: Proportion of Degraded Mountain Land.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
