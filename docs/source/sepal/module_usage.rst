@@ -179,14 +179,13 @@ A pop-up will display the following available options to set your AOI:
 Land Cover Dataset 
 ------------------
 
-Having defined the Area of Interest in the previous section,we are now going to stipulate which landcover dataset we are going to use in the analysis.
+This section of the documentation covers the configuration of the land cover dataset for the computation of SDG Indicator 15.4.2.
 
-.. Note:: As mentioned earlier,users have an option of using national datasets or the default (ESA-CCI derived ones). If using custom land cover maps , you will also be requested to set up land cover legend reclassification rules for Sub-indicator A and B, as well as the land cover transition matrix for computing Sub-Indicator B.This will be described in detail in the following sections.
 
 Defining your land cover dataset 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**1.	Click on the Land cover dataset drawer in the left panel menu.** A pop-up questionnaire will ask you to indicate the land cover map you wish to use. 
+**1. Click on the Land cover dataset in the process drawers located in the left panel to open the land cover dataset selector, as shown below:**
 
 .. image:: ../_static/sepal/default_datasets.PNG
    :align: center
@@ -194,14 +193,23 @@ Defining your land cover dataset
    :alt: land cover module
 
 
-**2. In the first question of the questionnaire, you have to indicate the land cover maps that you wish to use to compute the indicator.**
+**2. The panel presents two questions:**
 
-If you want to use your own custom land cover datasets,select :guilabel:`yes`  to this question, a new button :guilabel:`Open Parameters Settings`  will appear. If you select :guilabel:`No` , the module will automatically use the default global land cover datasets for calculating this indicator (ESA CLI Landcover ). We will look at each scenario individually:
+**Would you like to use a custom land use/land cover map?**
+- Select **Yes** to use national land cover maps to compute both sub-indicators.
+- Select **No**  to use the default global land cover time series . 
+
+**Would you like to change the default land cover transition matrix?**
+
+- Select **Yes** to use a custom land cover transition matrix to compute sub-indicator B. 
+- Select **No** to use the default transition matrix (UN-SEEA classes derived).
+
+We will look at each scenario individually:
 
 Using the Default Landcover Maps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When custom national landcover maps are not available,national agencies can use the default landcover maps available in SEPAL SDG 14.4.2 :sub:`beta`.
+When custom national landcover maps are not available,national agencies can use the default land cover dataset available in SEPAL SDG 14.4.2 .
 
 After clicking on :guilabel:`No`  to the first question,you have a choice to modify the land cover transition matrix or use the default one.If using the default one, click :guilabel:`No`  to the transition matrix question and proceed to the :ref:`Defining the Indicator Settings Chapter<Indicator Settings>`
 
@@ -217,32 +225,38 @@ Using Custom Landcover maps
    :alt: Using-custom_landcover
 
 
-- This opens a new pop-up window that allows you to select your land cover maps as a GEE asset (remember that they must be stored as a `GEE image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be able to be imported.) Use the bottom arrow to choose your asset or copy/paste it directly from GEE. Then click on :guilabel:`Get classes`
+- This opens a new pop-up window that allows you to select your land cover maps as a GEE asset (remember that they must be stored as a `GEE image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be imported.Individual images will not be recognized by the app). Use the bottom arrow to choose your asset or copy/paste it directly from GEE. Then click on :guilabel:`Get classes`
 
 .. image:: ../_static/sepal/custom_datasets_1.PNG
    :width: 1000
    :alt: custom_landcover map
 
 
-Reclassifying the landcover map legend for sub-Indicator A computation.
+.. note :: Choosing Yes in the first question and No in the second, will have the model assume that the selected land cover map is already classified according to the UN-SEEA classification and it will use the default transition matrix. In some cases , national authorities might opt to use the default land cover map but still define a custom transition matrix to capture local degradation characteristics. More on this will be described in the next section.
+
+
+**3. For the case of Nepal , we will use the default land cover map and transition matrix. Therefore, we select :guilabel:`no` to both questions ,then click on :guilabel:`Open Parameters Settings` to proceed.**
+
+
+Reclassifying the land cover map legend for sub-Indicator A computation.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Once you have specified your custom image collection, you will be required to reclassify the legend of your land cover maps into the 10 landcover classes as defined by the UN-SEEA , which is,as explained earlier,the FAO-defined land cover legend for SDG 15.4.2 computation.
+ 1. Once you have specified your custom land cover maps, you will need to reclassify your legend into the 10 land cover classes defined by the UN-SEEA, which is the default classification scheme adopted for this sub-indicator.
 
 .. image:: ../_static/sepal/custom_reclassification_sub_a.PNG
    :align: center
    :width: 900
    :alt: reclassifying subA
 
-Reclassification can be done in two different ways; By manually reclassifying your source and target landclasses or by uploading a reclassification matrix.
+Reclassification can be done in two different ways; By manually assigning your source and target land classes or by uploading a reclassification matrix.
 
 Using a reclassification matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 .. _reclass_table:
-  .. tip::
-   
-     What is a reclassification matrix table?
+
+  .. tip:: What is a reclassification matrix table?
 
      A reclassification matrix is a comma-separated values (CSV) file used to reclassify old pixel values into new ones. The CSV file only has to contain two values per line, the first one refers to the `from` value, while the second is the `target` value, just as it is described in the following table: 
 
@@ -257,8 +271,12 @@ Using a reclassification matrix
          "511", "4"
 
 
-- To upload a reclassification table,click on the arrow icon :guilabel:`⬆`  located in the top right corner of the reclassification pop-up window(see the image above).
-- Upload a reclassification matrix table in :code:`.CSV` format, indicating the SEEA land cover equivalent to the classes of your land cover map.Remember the table must already be uploaded in your SEPAL environment. To learn how to do that, please see the `how to exchange files in SEPAL <https://docs.sepal.io/en/latest/setup/filezilla.html#exchange-files-with-sepal>`_. 
+
+Uploading a reclassification matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- To use a custom reclassification matrix  , click on the arrow icon :guilabel:`⬆`  in the top right corner of the reclassification pop-up window(see the image above).
+- The table must be in :code:`.csv` , indicating the SEEA land cover equivalent to your land cover classes .Remember the table must already be uploaded in your SEPAL environment. To learn how to do that, please see the `how to exchange files in SEPAL <https://docs.sepal.io/en/latest/setup/filezilla.html#exchange-files-with-sepal>`_. 
 
 
 .. tip:: The target values must match the UN-SEAA classes codes for sub-indicator A (click on the info button at the top of the table for information on how the SEEA classes are coded).
@@ -270,16 +288,15 @@ Using a reclassification matrix
    :alt:  Uploading a reclassification matrix
 
 
-- Clicking on :guilabel:`load` will automatically reclassify your landcover legend into the legend defined by the reclassification matrix.
+- Clicking on :guilabel:`load` will automatically reclassify your landcover legend .
+**In certain cases, certain land cover classes might be classified as No Data, Missing Values or Unclassified .In such cases leaving the classes blank will be interpreted as 0 values by SEPAL SDG 15.4.2 and consequently not included in the computation. Note: Any values left blank will be interpreted as 0**.
 
-**In certain cases, landcover classes might be classified as No Data,Missing Values or Unclassified.In such cases leaving the classes blank will be interpreted as 0 values by SEPAL SDG 15.4.2 :sub:`beta` and consequently not included in the computation. Note: Any values left blank will be interpreted as 0.**
-
-.. Important:: For ease and comparability in defining the reclassifiaction matrix,the development team have created a CSV template that countries can download and modify for their use.You can also find the template in the :ref:`Annex section <Annex>`.Remember you have to upload the CSV file into SEPAL for you to use it.
+.. Important:: For ease and comparability in defining the reclassifiaction matrix,the development team have created a reclassification template that countries can modify for their use.The template can be found in the :ref:`Annex section <Annex>`.
 
 
-Manual Reclassification 
-~~~~~~~~~~~~~~~~~~~~~~~~
-- Directly specify the reclassification rules by manually indicating the SEEA land cover equivalent (in the destination class column) for each of the land cover classes of your land cover map (in the original class column) as shown below:If need be,the information icon located at the tools ribbon upper right hand can be used to refer to the UN-SEAA classes .
+Manually Reclassifying the land classes 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Directly specifying the reclassification rules by indicating the SEEA land cover equivalent (in the destination class column) for each of the land cover classes of your land cover map (in the original class column) as shown below:If need be,the information icon located at the tools ribbon upper right hand can be used to refer to the UN-SEAA classes .
 - After manually reclassifying your legend, you can use the save :guilabel:`💾` button located at the top of the table to save hte table as a CSV file, that can be used at a  future calculation instead of manually filling up the table again.
 
 .. image:: ../_static/sepal/custom_reclassification_sub_a.PNG
