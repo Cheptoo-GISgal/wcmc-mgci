@@ -207,17 +207,17 @@ Defining your land cover dataset
 
 We will look at each scenario individually:
 
-Using the Default Landcover Maps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using the Default Land cover Maps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When custom national landcover maps are not available,national agencies can use the default land cover dataset available in SEPAL SDG 14.4.2 .
+When custom national land cover maps are not available,national agencies can use the default land cover dataset available in SEPAL SDG 14.4.2 .
 
 After clicking on :guilabel:`No`  to the first question,you have a choice to modify the land cover transition matrix or use the default one.If using the default one, click :guilabel:`No`  to the transition matrix question and proceed to the :ref:`Defining the Indicator Settings Chapter<Indicator Settings>`
 
-In the case where national agencies want to modify the landcover transition matrix,the process is described :ref:`here <Defaultlccustommatrix>`.
+In the case where national agencies want to modify the land cover transition matrix,the process is described :ref:`here <Defaultlccustommatrix>`.
 
-Using Custom Landcover maps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using Custom Land cover maps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Select :guilabel:`yes`  to the first question. Then click on :guilabel:`Open Parameters Settings`  as shown below:
 
 .. image:: ../_static/sepal/custom_lc.PNG
@@ -289,7 +289,7 @@ Uploading a reclassification matrix
    :alt:  Uploading a reclassification matrix
 
 
-- Clicking on :guilabel:`load` will automatically reclassify your landcover legend .
+- Clicking on :guilabel:`load` will automatically reclassify your land cover legend .
 **In certain cases, certain land cover classes might be classified as No Data, Missing Values or Unclassified .In such cases leaving the classes blank will be interpreted as 0 values by SEPAL SDG 15.4.2 and consequently not included in the computation. Note: Any values left blank will be interpreted as 0**.
 
 .. Important:: For ease and comparability in defining the reclassifiaction matrix,the development team have created a reclassification template that countries can modify for their use.The template can be found in the :ref:`Annex section <Annex>`.
@@ -314,15 +314,15 @@ For our example, we will reclassify Nepal’s national land cover class using th
 
 -Once all land classes have been reclassified , click on **Reclassify Land Cover for sub-indicator B** in the process drawer to proceed.
 
-Reclassifying your landcover map legend for sub-Indicator B computation.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Reclassifying your land cover map legend for sub-Indicator B computation.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This step allows you to reclassify the legend of your land cover map for computing Sub-Indicator B. 
 
 .. note:: In contrast to sub-indicator A, national authorities have the liberty to use alternative land cover legends in the place of the default 10 UN-SEEA classes. Consequently ,the UN-SEEA legend can be adapted to the national context to ensure that it adequately captures the key degradation and improvement transitions identified in the country . For instance, a given country may decide to differentiate "natural forests" from "tree plantations" in sub-indicator B.
 
 For this reason, this step allows users to apply a new reclassification, or alternatively, use the same reclassification rules defined in Sub-Indicator A. In the latter case,you can access the the reclassification matrix you created and saved earlier by clicking the upload button amnd choosing the file. For both cases, the land cover reclassification rules must be a :code:`.CSV` file, following the same method as in the prior step.
 
-Check the :ref:`Annex <Annex>` for a template that can be modified for your landcover legend.
+Check the :ref:`Annex <Annex>` for a template that can be modified for your land cover legend.
 
 
 Uploading a transition matrix for computing Sub-Indicator B
@@ -417,31 +417,20 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
    :width: 1000
    :alt: Reclassify table
 
- RECHECK from here
-
-4. SEPAL SDG 15.4.2  offers the following advanced options:
-
-.. image:: ../_static/sepal/advanced_settings.PNG
-   :align: center
-   :width: 1000
-   :alt: Advanced Options
-
-- Using Real Surface Area methods instead of Planimetric options used by default by SEPAL SDG 15.4.2 :sub:`beta`.(For more on this check the indicator's metadata )
-- Running in GEE for large datasets(large datasets are automatically thrown into GEE for computation).This option should be chosen when there are computational time errors(usually associated with large datasets hence cannot be run on the fly).
-- Process scale:If this capability is activated,allows the user to define the computational scale. Remember,the scale chosen will affect the speed of computation( finer scales will take more time and vice versa) and the accuracy of the results.If this option is not chosen,computation will run at the scale of the input data.
+ 
 
 Defining parameters for Sub-Indicator B: Proportion of Degraded Mountain Land.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In contrast to Sub-Indicator A, in Sub-Indicator B the extent of degraded mountain land is calculated first in the baseline period 2000 - 2015. This baseline sets the benchmark ​from which the extent of land degradation is measured and monitored i.e. every 3 years after 2015. Put simply, new land cover degradation in the reporting periods (2018, 2021, 2024, ...) is added to the baseline to estimate the current extent of land cover degradation.  This is why in this instance the tool automatically uses the 2000-2015 as baseline.
+Unlike sub-indicator A, sub-indicator B first calculates the extent of degraded mountain land during the baseline period 2000–2015. This baseline sets the benchmark against which land degradation is measured and monitored every three years from 2015 onwards. In each subsequent reporting period (2018, 2021, 2024, ...), newly degraded land is added to the baseline estimate to track the cumulative extent of land cover degradation over time. For this reason, the tool automatically applies 2000–2015 as the baseline period.
 
-**1. Define your landcover maps for the baseline years (2000 and 2015) by linking each of the land maps to the corresponding reference year of each map. If you are using custom national land cover maps that does not exactely match reporting years of the baseline, select the map whose reference year is closest to the reporting year (For example, you could select a land cover map for 1998 for the reporting year 2000).**
+**1. Define the land cover maps for the baseline years 2000 and 2015 by linking each of the land maps to their corresponding reference year. If your custom national land cover maps do not exactly match the baseline reporting years, select the map whose reference year is closest to the required reporting year. For example, a land cover map for 1998 could be used for the reporting year 2000.**
 
 .. image:: ../_static/sepal/baseline_definition.PNG
    :align: center
    :width: 500
    :alt: Reclassify table
 
-**2. Then define the land cover maps for each of the reporting years and click OK**
+**2. Then define the land cover maps for each of the reporting years and click :guilabel:`OK` to compute.**
 
 .. image:: ../_static/sepal/reporting_definition.PNG
    :align: center
@@ -451,17 +440,21 @@ In contrast to Sub-Indicator A, in Sub-Indicator B the extent of degraded mounta
 
 Calculation of SDG Indicator 15.4.2
 -----------------------------------
-
-Once you have set the parameters of each sub-indicator, the tool is now ready to compute the sub-indicators as shown below:
+Once the parameters of each sub-indicator are set, the tool is now ready to run as shown below:
 
 .. image:: ../_static/sepal/defining_reporting_years_results.PNG
    :align: center
    :width: 1300
    :alt: Sub-indicator computations.
 
-1. Click on the :guilabel:`Calculate MGCI` button to initiate the computation.
+.. tip::
 
-2. Once computation is completed, you should see a resemblance of the image below:
+   By default ,SEPAL-SDG 15.4.2 calculates indicator values assuming planimetric area methods . To calculate indicator values using the real surface area method (a method that takes into account the third dimension of mountain surfaces through the use of digital elevation models and is known to derive closer estimates of the real surface area of mountain regions), click on "Use Real Surface Area" in the Advanced options . Additionally , users can direct computation in Earth Engine (Run in EE background) or modify the processing scale by defining them in the Advanced Options as well.
+
+**1. Click on the :guilabel:`Calculate Indicator` to initiate the computation.**
+
+**2.Once completed, the module should display the following :**
+
 
 .. image:: ../_static/sepal/mgci_results_processing.PNG
    :align: center
@@ -470,9 +463,10 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 .. tip::
 
-   SEPAL-SDG 15.4.2 :sub:`beta` calculates the indicator values assuming planimetric area methods by default. To calculate indicator values using the real surface area method (a method that takes into account the third dimension of mountain surfaces through the use of digital elevation models and is known to derive closer estimates of the real surface area of mountain regions), click on **Use Real Surface Area**
+   SEPAL-SDG 15.4.2 calculates the indicator values assuming planimetric area methods by default. To calculate indicator values using the real surface area method (a method that takes into account the third dimension of mountain surfaces through the use of digital elevation models and is known to derive closer estimates of the real surface area of mountain regions), click on **Use Real Surface Area**
 
-3. The entire computataion is done "on the fly” and thus you need to export your reporting tables to visualize and use them as and if required. To do that, click on  the :guilabel:`Export Reporting Tables`.  When completed, a message will appear indicating where the tables have been exported. 
+
+3. The entire analysis is done "on the fly” .To export the results, click  :guilabel:`Export Reporting Tables` , a message will appear indicating the location of the exported files once complete.
 
 .. image:: ../_static/sepal/exporting_results.PNG
    :align: center
@@ -481,34 +475,24 @@ Once you have set the parameters of each sub-indicator, the tool is now ready to
 
 Calculation from Task
 ^^^^^^^^^^^^^^^^^^^^^
-As explained in the previous sections, SEPAL runs on the Google Earth Interface. This means that the computation is restricted by available GEE resources. One limitation,however, is the time allowable to get results on the fly (see `computation time out <https://developers.google.com/earth-engine/guides/debugging#timed-out>`_). So any computation that takes more than five minutes will automatically be thrown an exception. To overcome this limitation, the process will be executed as a task —which are operations that are capable of running much longer than the standard timeout.Simply put, the computation is redirected to run on  GEE as opposed to the module. If the computation is created as a task, you  will see a similar message as the shown in the image below:
-To showcase the Calculation from Task,an example on computation on the United States will be used.
+As explained in earlier sections, SEPAL runs on Google Earth Engine (GEE), and as a result, the computation of SDG Indicator 15.4.2 is subject to GEE resource limitations. One such limitation is the computation timeout (see `computation time out <https://developers.google.com/earth-engine/guides/debugging#timed-out>`_) ,whereby any computation that takes more than five minutes will throw an exception. To overcome this, the process will be automatically executed as a GEE task —an operation capable of running beyond the standard timeout limit. If the computation is submitted as a task, a message similar to the one shown in the image below will appear.
 
 .. image:: ../_static/sepal/tasks_notification.PNG
    :align: center
    :width: 1200
    :alt: Calculation from Task Notification
 
-The computation in GEE can be seen running under the GEE tasks as shown here:
+A new file containing the task ID is created and stored in the ../module_results/sdg_indicators/mgci/tasks folder. This file allows you to track the status of the task at any time. Alternatively, you can monitor progress using the GEE task tracker (shown above), which displays all tasks currently running on the server.
 
 .. image:: ../_static/sepal/tasks_tab.PNG
    :width: 400
    :align: center
    :alt: Computation in GEE
 
-When computation can’t be done on the fly, a new file containing the id of the task is created and stored in the **../module_results/sdg_indicators/mgci/tasks** folder. This file will help you to track the status of the task at any moment. An alternative way to track the progress of the task is by using the GEE task tracker as shown above- there you can find the tasks that are running on the server.
-Once the computation is complete in GEE,we will return to SEPAL-SDG 15.4.2 :sub:`beta` to continue with the rest of the computation.
 
-Click on the **Export from Tasks** drawer on the left menu panel. This window highlights the steps to process GEE tasks as seen below:
+**1. To enable a computation from task; Click the "Export from task" in the process drawer.**
 
-.. image:: ../_static/sepal/export_from_task.PNG
-   :align: center
-   :width: 1000
-   :alt: Exporting task from file
-
-**1. To enable a computation from task; first we need to locate the tasks file within SEPAL.**
-
-To do so, you can either search for a :code:`.JSON` task file in your SEPAL environment using the navigator by clicking on the search file button, and then clicking over the :guilabel:`Download Reporting Tables` button and the result will be displayed if the process status is completed .
+We start by locating the tasking file within SEPAL using the navigator , initiated by clicking on the select file button, and then  Download and Export Tables button .The computation then proceeds as normal , displaying the results dashboard once completed. To locate the tasks manually, navigate to the File Layer > Downloads > Module results> Tasks as shown below.
 
 .. image:: ../_static/sepal/locating_task_file.PNG
    :align: center
@@ -516,50 +500,38 @@ To do so, you can either search for a :code:`.JSON` task file in your SEPAL envi
    :alt: Locating the task file
 
 
-**2. Alternatively,you can locate the tasks manually by navigating to the **File Layer > Downloads > Module results>Tasks** on SEPAL as shown below:
-
-.. image:: ../_static/sepal/locating_tasks.png
-   :align: center
-   :width: 900
-   :alt: Task File Location
-
-
-**3. Clicking on the Download and Export Tables will finalize the computation**
-
-
-
 Visualizing the results
 -----------------------
 
-SEPAL SDG 15.4.2 :sub:`beta` allows the visualization of the results in the following two ways: 
+SEPAL-SDG 15.4.2 provides two ways to visualise and access the computed results : 
 
-• **Using the exported tables**: These provide the full results of the computation in a tabular format.
+- The exported tables: These provide the full results of the computation in a tabular format.
 
-• **Using the MGCI results drawer**: provides a simplified and visual representation of the results.
+- Using the MGCI results drawer that provides a simplified and visual representation of the results.
 
-Let’s look at these individually;
+We will look at these individually.
 
-Visualizing the results using the Exporting tables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exported tables
+^^^^^^^^^^^^^^^
 
-As explained earlier, once computation is completed, users can export the reporting tables from their SEPAL environment.
+Once the computation is complete, the results are automatically saved to the SEPAL workspace. Users can also download the files to their local computers for offline access or external reporting purposes.
 
-**1. To locate the tables, navigate to the Files Tab > Under the Downloads, you should see your table under MGCI reports as shown below:**
+**1. To locate the tables within SEPAL, navigate to the Files Tab , located in the left panel .Navigate to  Module results > sdg_indicators > 15.4.2 > reports , you should see your table under MGCI reports as shown below:**
+
 
 .. image:: ../_static/sepal/locating_exported_results.png
    :align: center
    :width: 900
    :alt: Locating Exported Tables
 
-**2. To download the report from SEPAL, click on the report; this activates the download icon in the top right side of the screen.**
+**2. To download the report from the SEPAL workspace, click on the report to activate the download icon , found in the top left side of the screen.**
 
 .. image:: ../_static/sepal/downloading_export_report.png
    :align: center
    :width: 900
    :alt: Downloading Exported Tables
 
-**3. Once the report is downloaded, you can visualize the results of the computation as seen below for all the reporting years defined earlier on.**
-
+**3. Once the report is downloaded, you can visualise the results of the computation as seen below ;**
 .. image:: ../_static/sepal/results_csv.png
    :align: center
    :width: 700
@@ -568,54 +540,34 @@ As explained earlier, once computation is completed, users can export the report
 .. Tip:: The tables follow the standard format for SDG reporting and therefore can be used to report SDG Indicator 15.4.2 values to FAO.
 
 
-Visualizing the results through the MGCI Results Drawer
+Visualising the results through the MGCI Results Drawer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SEPAL-SDG 15.4.2 :sub:`beta` also allows users to explore the results of the computation visually. The module generates dashboards and maps that show the changes that have occurred in the area of interest. To generate these, do the following;
+SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly within the module. Interactive dashboards are generated to display the results for both sub-indicators . Additionally users can add layers to the map  and download needed layers . To navigate the results panel ,
 
-**1.Click on the MGCI results drawer** in the left panel as seen below:
+
+**1.	Click on the "Results" located in the process drawer on the left, to open the Results panel.**
 
 .. image:: ../_static/sepal/results_drawer.PNG
    :align: center
    :width: 1200
    :alt: Results drawer
 
-2. The **Visualization Tab**  on the top left of the Results dashboard generates a map of your AoI. Click on the tab and choose a year to visualize in the drop down list and click **+** as seen below:
+**2. To map the computational layers including the disaggregated land cover maps , select a layer from the Layer List , then click on "Add Layer."**
 
 .. image:: ../_static/sepal/results_mapped.PNG
    :align: center
    :width: 1200
    :alt:   Visualization
 
-As seen above the map generated by the tool shows the landclasses and the degradation status for each of the years.
-
-3. To generate the results from the computation for Sub-Indicator A, click on the **Sub-Indicator A tab** and choose the year you want to visualize and click on the :guilabel:`Calculate` button.This will generate dashboards to visualize the results of the computation. As seen below, the tool will generate an Overall MGCI for your study area. Additionally, dashboards will be generated for each of the bioclimatic classes.
+**3. To download a layer , choose the layer of interest in the layer list , then click on "Export Layer."**
 
 .. image:: ../_static/sepal/sub_a_results.PNG
    :align: center
    :width: 800
    :alt: Visualizing Sub_Indicator_A
 
-
-.. image:: ../_static/sepal/suba_by_bioclimatic_belts.PNG
-   :align: center
-   :width: 800
-   :alt: Visualizing sub-indicator_A
-
-4. To see the results for Sub-Indicator B,click on the **Sub-Indicator B tab** and choose a target year (baseline or one of the reporting years) using the drop-down arrow and a bioclimatic belt. Then click on :guilabel:`Calculate` :
-
-.. image:: ../_static/sepal/subindicator_b_results.PNG
-   :align: center
-   :width: 700
-   :alt: Visualizing sub-indicator B
-
-
-The results, shown as transitions in land cover types for a given belt will be displayed using a Sankey Plot, as shown below:
-
-.. image:: ../_static/sepal/subindicator_b_dashboard.PNG
-   :align: center
-   :width: 700
-   :alt: Visualizing the bioclimatic belts
+**3. To download a layer , choose the layer of interest in the layer list , then click on "Export Layer."**
 
   
 .. _Annex:
@@ -623,69 +575,94 @@ The results, shown as transitions in land cover types for a given belt will be d
 Annex
 -----
 
-This section contains supplementary information and resources for an enhanced understanding and operationalization of SEPAL-SDG 15.4.2 :sub:`beta`.
+This section contains supplementary information and resources for an 
+enhanced understanding and operationalization of SEPAL - SDG 15.4.2..
 
-Computation resources:  Template Tables
+Computation Resources: Template Tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. Tip:: All the templates contain a README section to guide users in populating the templates for the transition and reclassification matrices.
+.. tip:: 
+   
+   All templates contain a README .matrices.
 
-
-Template A :Custom Land Cover Reclassification Template.
+Template A: Custom Land Cover Reclassification Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the computation of sub-indicator A using **custom** landcover maps,SEPAL SDG 15.4.2 :sub:`beta` calls for reclassifying the landcover legends into the UN-SEAA defined one.
-The development team recommends countries to adopt this template to reclassify their land-cover maps .(It is important to note that the origin and target names and codes must be properly defined for the reclassification to work properly) 
-The table structure calls users to have the following fields defined as columns:
+When computing sub-indicator A using **custom** land cover maps, SEPAL .2 :sub:`beta` requires reclassifying the land cover legend into the 
+UN-SEEA classification.
 
-- from_name: Associated name of each land cover class of the custom land cover map.
+The development team recommends that countries adopt this template to 
+reclassify their land cover maps.
 
-- from_code: Numerical code (pixel value) of each land cover class of the custom land cover map.
+.. note::
+   
+   The origin and target names and codes must be properly defined for 
+   the reclassification to work correctly.
 
+The table requires the following fields as columns:
 
-
-.. raw:: html
-
-   <a target="_blank" href="../_static/sepal_tables/Custom_LC_Classification_SubB.csv" download="_static/sepal_tables/Custom_LC_Classification_SubB.csv">Custom_LC_Classification_SubB</a>
-
-
-Template B: Custom LandCover Classification Template(Sub-indicator B) 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-As explained earlier,countries must use the UN-SEAA defined classes in sub-indicator A but have more liberty when defining the classification scheme for sub-indicator B.
-Countries can opt to use the UN-SEAA classification legend(defined in the earlier step) or use the FAO-defined template to develop their classification nd legehere
-
-Download TemplateB 
-
-
-.. raw:: html
-
-   <a target="_blank" href="../_static/sepal_tables/Default LC_map_reclassification.csv" download="_static/sepal_tables/LC_map_reclassification.csv">LC_map_reclassificato</a>
-
-
-
-Template C:Transition matrix
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This template is to be used when a custom land classification legend is used in Sub-Indicator B computation.It enables countries fully capture the transitions occurring in land-cover.
-When adopting this template,remember to fully capture the original and resultant classes,the impact and their subsequent codes for the transition to be fully captured by SEPAL SDG 15.4.2 :sub:`
-The following fields must be defined:
-
-- from_name: Associated name of the original land cover class.
-- from_code: Numerical code (pixel value) of the original land cover class.
-- to_name: Associated name of the final land cover class.
-- to_code: Numerical code (pixel value) of the final land cover class.
-- impact_name: Expected impact of the land cover transition. Only 3 values are allowed: (degraded, stable, improved).
-- impact_code : Associated code of the expected impact of the land cover transition. Only 3 values are allowed: (1 for degraded, 2 for stable, 3 for improved).
+- **from_name**: Name of each land cover class in the custom land cover map.
+- **from_code**: Numerical code (pixel value) of each land cover class in 
+  the custom land cover map.
+- **to_name**: Name of the corresponding UN-SEEA land cover class.
+- **to_code**: Numerical code of the corresponding UN-SEEA land cover class.
 
 Download the template here:
 
 .. raw:: html
 
-   <a target="_blank" href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/Transition_Matrix_SubB.csv">Transition_Matrix_SubB</a>
+   <a target="_blank" href="../_static/sepal_tables/Custom_LC_Classification_SubB.csv" download="_static/sepal_tables/Custom_LC_Classification_SubB.cs
+v">Custom_LC_Classification_SubB</a>
 
+Template B: Custom Land Cover Classification Template (Sub-indicator B)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As explained earlier, countries must use the UN-SEEA defined classes in 
+sub-indicator A but have more flexibility when defining the classification 
+scheme for sub-indicator B.
+
+Countries can choose to use either the UN-SEEA classification legend 
+(defined in the earlier step) or the FAO-defined template to develop their 
+classification and legend.
+
+Download the template here:
+
+.. raw:: html
+
+   <a target="_blank" href="../_static/sepal_tables/Default_LC_map_reclassification.csv" download="_static/sepal_tables/LC_map_reclassification.csv">LC_map_reclassification</a>
+
+Template C: Transition Matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This template should be used when a custom land classification legend is 
+applied in the Sub-Indicator B computation. It enables countries to fully 
+capture the transitions occurring in land cover.
+
+.. note::
+   
+   When adopting this template, remember to fully define the original and 
+   resultant classes, the impact, and their subsequent codes so tha.ransitions are correctly captured by SEPAL - SDG 15.4.2 :sub:`beta`.
+
+The following fields must be defined:
+
+- **from_name**: Name of the original land cover class.
+- **from_code**: Numerical code (pixel value) of the original land cover class.
+- **to_name**: Name of the final land cover class.
+- **to_code**: Numerical code (pixel value) of the final land cover class.
+- **impact_name**: Expected impact of the land cover transition. Only three 
+  values are allowed: *degraded*, *stable*, or *improved*.
+- **impact_code**: Numerical code for the expected impact. Only three values 
+  are allowed: **1** for degraded, **2** for stable, **3** for improved.
+
+Download the template here:
+
+.. raw:: html
+
+   <a target="_blank" href="../_static/sepal_tables/Transition_Matrix_SubB.csv" download="_static/sepal_tables/TransitibB.csv">Transition_Matrix_SubB</a>
 
 .. note:: 
    
-   Remember that SEPAL SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Therefore,once all these tables are modified as per the countries'needs ,they should be made  into :code:`.CSV` and imported into the SEPAL environment as described in earlier sectons.
-
-
+   SEPAL - SDG 15.4.2 :sub:`beta` only accepts :code:`.csv` files. Once 
+   these templates are modified to meet each country's needs, they must be 
+   saved as :code:`.csv` files and imported into the SEPAL environment as 
+   described in earlier sections.
