@@ -18,10 +18,10 @@ SEPAL-SDG 15.4.2 is in active development. If you have specific bugs to report o
 
 Authors
 ^^^^^^^
- 
+
 SEPAL-SDG 15.4.2 has been developed by the Food and Agriculture Organization (FAO) of the United Nations, with funding from Norway's International Climate and Forest Initiative (NICFI).
 
-Daniel Guerrero developed the tool , Ann Cheptoo Rotich developed the technical documentation and Xavier de Lamo led and supervised the development of both products.
+Daniel Guerrero developed the tool , Ann Cheptoo Rotich developed the technical documentation , and Xavier de Lamo led and supervised the development of both products.
 
 License
 ^^^^^^^
