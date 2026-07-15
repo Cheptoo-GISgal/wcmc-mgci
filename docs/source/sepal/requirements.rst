@@ -3,7 +3,7 @@ Module Requirements
 
 Initial Setup
 ^^^^^^^^^^^^^
-SEPAL is closely linked to Google Earth Engine (GEE), a Google-powered Earth-observation cloud-computing platform, as it is built leveraging many of its functionalities. Therefore,to run SEPAL-SDG 15.4.2 , you will need to have **connected SEPAL and GEE accounts**. 
+SEPAL is closely linked to Google Earth Engine (GEE), a Google-powered Earth-observation cloud-computing platform, as it is built leveraging many of its functionalities. Therefore, to run SEPAL-SDG 15.4.2 , you will need to have **connected SEPAL and GEE accounts**. 
 
 - To **Create a SEPAL account** please follow the `registration steps described here <https://docs.sepal.io/en/latest/setup/register.html#sign-up-to-sepal>`_ and then familiarize yourself with the tool by exploring its interface.
 - To **Create a Google Earth Engine (GEE) account** please follow these `steps <https://docs.sepal.io/en/latest/setup/gee.html#create-a-gee-account>`_ and don't forget to `initialize the home folder <https://docs.sepal.io/en/latest/setup/gee.html#initialize-the-home-folder>`_.
@@ -13,25 +13,25 @@ SEPAL is closely linked to Google Earth Engine (GEE), a Google-powered Earth-obs
 
 Data Requirements
 ^^^^^^^^^^^^^^^^^
-SDG Indicator 15.4.2 requires several spatial data inputs to be computed. These include :
+SDG Indicator 15.4.2 requires several spatial data inputs to be computed. These include:
 
 - **A Mountain Area Map** 
   
-For standardization and international comparability of indicators values, SDG Indicator 15.4.2 adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as ‘Kapos mountain classes’), based on elevation, slope and local elevation ranges parameters. This mountain area is subdivided into bioclimatic belts (Nival, Alpine, Montane, and Remaining Mountain Area) based on average temperatures as defined by Körner et al. (2011). A global mountain area map based on these definitions and methodologies has been developed by FAO and is used by default by SEPAL-SDG 15.4.2 in the computations. 
+For standardization and international comparability of indicator values, SDG Indicator 15.4.2 adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as ‘Kapos mountain classes’), based on elevation, slope and local elevation range parameters. This mountain area is subdivided into bioclimatic belts (Nival, Alpine, Montane, and Remaining Mountain Area) based on average temperatures as defined by Körner et al. (2011). A global mountain area map based on these definitions and methodologies has been developed by FAO and is used by default by SEPAL-SDG 15.4.2 in the computations. 
 
 - **A National Administrative Boundary for the country of interest** 
   
-SEPAL-SDG 15.4.2 has been designed to facilitate the computation of SDG Indicator 15.4.2 at national level. The FAO Global Administrative Unit Layers (GAUL) 2015 data set is the default source for national boundaries. Alternatively,national agencies can use their own national country boundary layer if available. 
+SEPAL-SDG 15.4.2 has been designed to facilitate the computation of SDG Indicator 15.4.2 at national level. The FAO Global Administrative Unit Layers (GAUL) 2015 data set is the default source for national boundaries. Alternatively, national agencies can use their own national country boundary layer if available. 
 
 - **A collection of Land Cover Maps for the country of interest** 
   
-Land cover maps represent spatially the physical coverage of the Earth's surfacev categorized into different types (classes) e.g. forests, grasslands, croplands, lakes, wetlands. This data serves different functions for SDG Indicator 15.4.2: 
+Land cover maps spatially represent the physical coverage of the Earth's surface categorized into different types (classes) e.g. forests, grasslands, croplands, lakes, wetlands. This data serves different functions for SDG Indicator 15.4.2: 
   
 - **In Sub-Indicator 15.4.2a**, land cover is used to categorize land into green and non-green cover areas. 
   
 - **In Sub-Indicator 15.4.2b**, land cover is used to identify areas where changes in the type of land cover may indicate a decline or loss of biodiversity, mountain ecosystem functions or services that are considered desirable in a local or national context. 
  
-The collection of land cover maps to compute this indicator should be available from the year **2000**. Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 avails the default land cover maps to compute the indicator (see Data Sources section). Additionally, it allows national authorities to use relevant national or regional land cover datasets. These datasets should also be available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ in order to allow SEPAL-SDG 15.4.2 to access them. The next section of the tutorial will explain how this is done.  
+The collection of land cover maps to compute this indicator should be available from the year **2000**. Similar to the national administrative boundary dataset, SEPAL-SDG 15.4.2 provides the default land cover maps to compute the indicator (see Data Sources section). Additionally, it allows national authorities to use relevant national or regional land cover datasets. These datasets should also be available as GEE assets as an `image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ in order to allow SEPAL-SDG 15.4.2 to access them. The next section of the tutorial will explain how this is done.  
 
 
 
@@ -44,7 +44,7 @@ GEE allows users to upload several types of data including shapefiles, raster im
 
 .. image:: ../_static/sepal/uploading_data.PNG
    :align: center
-   :width: 900
+   :width: 600
    :alt: GEE_Interface
 
 2. Clicking the  **New** button will list the acceptable file options, including **Raster** (Geotiffs or TFRecords), **Vector** (Shapefiles) and **Data tables** (CSV files), which will be described in the following subsections.
@@ -89,9 +89,9 @@ Any file errors will be highlighted by the uploader, as in the example below:
 
 5. Clicking on the asset will open an asset details window ; The asset is ready for use. You can now visualize, share or delete it accordingly.
 
-.. image:: /_static/sepal/asset_details_gee.PNG
+.. image:: ../_static/sepal/asset_details_gee.PNG
    :align: center
-   :width: 900
+   :width: 600
    :alt: asset_popup
 
 
@@ -106,7 +106,7 @@ When computing SDG 15.4.2, land cover maps are uploaded as raster files , made a
 
 .. image:: ../_static/sepal/uploading_rasters.PNG
    :align: center
-   :width: 400
+   :width: 450
    :alt: Geotiff_upload
 
 3. Repeat step 2 for each of the land cover maps.
@@ -122,12 +122,6 @@ To create an Image Collection;
 
 1. Click on the **Assets Tab** and then New > **Image collection.**
 
-.. image:: ../_static/sepal/image_collection.png
-   :align: center
-   :width: 300
-   :alt: Image-collection
-
-
 2. This will open the image collection constructor that will first prompt you to name your image collection as shown below:
 
 .. image:: ../_static/sepal/naming_image_collection.png
@@ -138,13 +132,7 @@ To create an Image Collection;
 
 3. Once the image collection is created, you can load it by pasting an Earth Engine asset ID into the Image Collection constructor (Ensure the **Edit** button is on) or by simply dragging individual assets to the image collection in the assets list as shown below:
 
-.. image:: ../_static/sepal/naming_image_collection.png
-   :align: center
-   :width: 400
-   :alt: Creating Image-collection
-
-
-4. Repeat this for each asset. Clicking on the Image Collection(in the asset list) should now show all the images that are contained in that collection and should now be ready to be used in your analysis or visualization.
+4. Repeat this for each asset. Clicking on the Image Collection (in the asset list) should now show all the images that are contained in that collection and should now be ready to be used in your analysis or visualization.
  
 .. image:: ../_static/sepal/image_collection_result.png
    :align: center
@@ -154,7 +142,7 @@ To create an Image Collection;
 
 Uploading  Tabular Files
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Tabular data can be uploaded into Google Earth Engine as comma-separated values (CSV) or Javascript Object Notation(JSON) files :code:`.csv`, or :code:`.json`). To upload tabular files:
+Tabular data can be uploaded into Google Earth Engine as comma-separated values (CSV) or Javascript Object Notation (JSON) files :code:`.csv`, or :code:`.json`). To upload tabular files:
 
 1. Select New > **csv file upload**. 
 2. In the pop-up window that appears, select the file you want to upload from your computer 
@@ -174,20 +162,25 @@ Tabular data can be uploaded into Google Earth Engine as comma-separated values 
 Uploading Vector Files into SEPAL via the Vector File Manager.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Apart from Google Earth Engine,you can directly upload your tabular datasets ( vector or CSV tables) into the SEPAL environment through the Vector File Manager.Read more on the `Vector File Manager here <https://docs.sepal.io/en/latest/modules/dwn/vector_manager.html>`_.
+Apart from Google Earth Engine,you can directly upload your tabular datasets ( vector or CSV tables) into the SEPAL environment through the Vector File Manager.Find more information on the `Vector File Manager here <https://docs.sepal.io/en/latest/modules/dwn/vector_manager.html>`_.
 
 1. Navigate to the **Apps** tab (located on the left of the SEPAL interface) and find the **Vector File Manager** by either navigating through the app list or using the search bar.
 2. Clicking on the app opens the vector file manager as shown below:
    
-.. image:: ../_static/sepal/uploading_csv.PNG
+.. image:: ../_static/sepal/updates_26/vector_file_manager.png
    :align: center
    :width: 400
    :alt: Vector File Manager Interface
 
 3. Clicking on the drop down arrow allows you to select the table type.(Accepted formats are shapefiles :code:`.shp` and table file :code:`.csv`)
 4. Choose the shapefile option and click on the :code:`📎` icon to navigate to your files and choose all appropriate files and click :guilabel:`Import`.
+    
+.. image:: ../_static/sepal/updates_26/uploading_shapefiles.png
+   :align: center
+   :width: 300
+   :alt:   Uploading Vector Files.
 
-.. image:: ../_static/sepal/uploading_csv.PNG
+.. image:: ../_static/sepal/updates_26/uploading_tables.png
    :align: center
    :width: 300
    :alt:   Uploading Vector Files.
@@ -197,7 +190,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
    
 .. image:: ../_static/sepal/importation_complete.PNG
    :align: center
-   :width: 1400
+   :width: 1500
    :alt: Vector File Upload Notification
 
 
@@ -212,5 +205,5 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
 The vector files you just uploaded are now within the SEPAL environment and can be used when required.
 
 
-.. seealso:: The methods are explained above should suffice for our case. However,since SEPAL’s built-in tools for uploading and downloading are limited, large amounts of data should be uploaded or downloaded using an FTP solution.More on this can be found `here <https://docs.sepal.io/en/latest/setup/filezilla.html#>`_.
+.. seealso:: The methods explained above should suffice for our case. However,since SEPAL’s built-in tools for uploading and downloading are limited, large amounts of data should be uploaded or downloaded using an FTP solution.More on this can be found `here <https://docs.sepal.io/en/latest/setup/filezilla.html#>`_.
 
