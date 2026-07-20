@@ -1,5 +1,3 @@
-
-
 The SEPAL interface and the SEPAL-SDG 15.4.2
 ============================================
 
@@ -14,7 +12,7 @@ Some applications in SEPAL make use of instances to run analyses ; running them 
 1. Go to the `SEPAL terminal <https://docs.sepal.io/en/latest/setup/presentation.html#terminal>`_ (blue icon in the left panel in the image below) and wait for the instance selector to start.
 .. image:: ../_static/sepal/setting_instance.PNG
    :align: center
-   :width: 500
+   :width: 400
    :alt: Setting_instances
 
 2. Type the instance name e.g. t1 , m2 or m4 then press ENTER.
@@ -27,22 +25,22 @@ Accessing SEPAL-SDG 15.4.2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To open the SEPAL-SDG 15.4.2 module , click on the **apps tab** and search for the SDG 15.4.2 module among the apps ,alternatively, you can type in the search box "SDG 15.4.2". Click on the app drawer and wait a few minutes for the module to load. 
-
-.. image:: ../_static/sepal/accessing_sepal_module.png
+  
+.. image:: ../_static/sepal/updates_26/finding_sepal.png
    :align: center
    :width: 1000
    :alt: Accessing_module
 
 The module's interface is divided into two main sections as shown below:
 
-- **Process drawers**: Located on the top left of the interface , the process drawers contain the processing steps to run the module. In SEPAL-SDG 15.4.2 , this is composed by 4 processing steps: Area of interest; Land cover settings; Indicator settings and Results.
-
-- **Help drawers**: Located just below the process drawers , they describe the tool, its objectives and give a background about its development. They also detail the source code (the module was developed under a MIT license, which means that the module is freely accessible, and the code is hosted publicly in GitHub); the Wiki (the latest documentation on tool)  ,the bug report (report of unexpected results or behavior.) and the tasks runner (runs larger processing elements). More on tasks will be elaborated in future sections.
-
-.. image:: ../_static/sepal/accessing_sepal_module.png
+.. image:: ../_static/sepal/updates_26/sepal_main_interface.png
    :align: center
    :width: 1000
    :alt: Accessing_module
+
+- **Process drawers**: Located on the top left of the interface , the process drawers contain the processing steps to run the module. In SEPAL-SDG 15.4.2 , this is composed by 4 processing steps: Area of interest; Land cover settings; Indicator settings and Results.
+
+- **Help drawers**: Located just below the process drawers , they describe the tool, its objectives and give a background about its development. They also detail the source code (the module was developed under a MIT license, which means that the module is freely accessible, and the code is hosted publicly in GitHub); the Wiki (the latest documentation on tool)  ,the bug report (report of unexpected results or behavior.) and the tasks runner (runs larger processing elements). More on tasks will be elaborated in future sections.
 
 
 Personalising SEPAL-SDG 15.4.2 
@@ -53,7 +51,7 @@ SEPAL-SDG 15.4.2 allows users to personalize its appearance to suit their prefer
 **Theme customisation:**
 Users can choose between a dark or light theme. To change the theme, click the theme icon , located at the bottom left panel , below the help drawers .The application will need to be restarted to apply the changes.
 
-.. image:: ../_static/sepal/theme_customization.PNG
+.. image:: ../_static/sepal/updates_26/Theme_customization.png
    :align: center
    :width: 800
    :alt: Module_personalization
@@ -123,7 +121,7 @@ A pop-up will display the following available options to set your AOI:
 - Administrative definitions
 - Custom layers
 
-.. image:: ../_static/sepal/defining_aoi.PNG
+.. image:: ../_static/sepal/updates_26/defining_aoi_options.png
    :align: center
    :width: 900
    :alt: Defining_AOI
@@ -134,7 +132,7 @@ A pop-up will display the following available options to set your AOI:
 - Select **Country** under Administrative definitions. 
 - In the dropdown list , select the country or territory to calculate SDG Indicator 15.4.2. In this example, we will select Nepal, as shown below.
 
-.. image:: ../_static/sepal/aoi_definition_country.PNG
+.. image:: ../_static/sepal/updates_26/aoi_method_countries.png
    :align: center
    :width: 400
    :alt: selecting_nepal
@@ -142,9 +140,9 @@ A pop-up will display the following available options to set your AOI:
 
 - Clicking on the :guilabel:`Select Area of Interest (AOI)` will display your selection on the map area alongside a corresponding legend.The algorithm automatically generates a legend based on the four mountain bioclimatic belt classes and the area for each as defined in the global mountain map developed by FAO to compute this indicator.
 
-.. image:: ../_static/sepal/aoi_defined.PNG
+.. image:: ../_static/sepal/updates_26/AOI_display.png
    :align: center
-   :width: 700
+   :width: 600
    :alt: displaying_nepal
 
 .. warning:: The  administrative boundaries available SEPAL-SDG 15.4.2 are extracted from the FAO Global Administrative Unit Layers (GAUL,2015) dataset. The designations employed in the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the United Nations Secretariat concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
@@ -160,9 +158,9 @@ A pop-up will display the following available options to set your AOI:
 - Copy the **Asset ID** in GEE and paste under "Select an asset"
 - Specify the column or leave the "Use all features" option to leave the default settings.
 
-.. image:: ../_static/sepal/aoi_definition_gee.PNG
+.. image:: ../_static/sepal/updates_26/aoi_method_gee.png
    :align: center
-   :width: 500
+   :width: 400
    :alt: Defining AOI using GEE Asset
 
 **Using a vector file;**
@@ -173,7 +171,7 @@ A pop-up will display the following available options to set your AOI:
 
 .. image:: ../_static/sepal/aoi_definition_gee.PNG
    :align: center
-   :width: 500
+   :width: 400
    :alt: Defining AoI using a vector file
 
 
@@ -188,7 +186,7 @@ Defining your land cover dataset
 
 **1. Click on the Land cover dataset in the process drawers located in the left panel to open the land cover dataset selector, as shown below:**
 
-.. image:: ../_static/sepal/default_datasets.PNG
+.. image:: ../_static/sepal/updates_26/landcover_questionnaire.png
    :align: center
    :width: 1000
    :alt: land cover module
@@ -218,19 +216,18 @@ In the case where national agencies want to modify the land cover transition mat
 
 Using Custom Land cover maps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Select :guilabel:`yes`  to the first question. Then click on :guilabel:`Open Parameters Settings`  as shown below:
-
-.. image:: ../_static/sepal/custom_lc.PNG
-   :align: center
-   :width: 1000
-   :alt: Using-custom_landcover
-
+- Select :guilabel:`yes`  to the first question. Then click on :guilabel:`Open Parameters Settings` .
 
 - This opens a new pop-up window that allows you to select your land cover maps as a GEE asset (remember that they must be stored as a `GEE image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be imported.Individual images will not be recognized by the app). Use the bottom arrow to choose your asset or copy/paste it directly from GEE. Then click on :guilabel:`Get classes`
 
-.. image:: ../_static/sepal/custom_datasets_1.PNG
-   :width: 1000
+.. image:: ../_static/sepal/updates_26/custom_lc_selection.png
+   :width: 500
    :alt: custom_landcover map
+
+
+.. image:: ../_static/sepal/updates_26/custom_lc_default_reclass.png
+   :width: 500
+   :alt: custom_landcover_default_transition
 
 
 .. note :: Choosing Yes in the first question and No in the second, will have the model assume that the selected land cover map is already classified according to the UN-SEEA classification and it will use the default transition matrix. In some cases , national authorities might opt to use the default land cover map but still define a custom transition matrix to capture local degradation characteristics. More on this will be described in the next section.
@@ -244,10 +241,6 @@ Reclassifying the land cover map legend for sub-Indicator A computation.
 
  1. Once you have specified your custom land cover maps, you will need to reclassify your legend into the 10 land cover classes defined by the UN-SEEA, which is the default classification scheme adopted for this sub-indicator.
 
-.. image:: ../_static/sepal/custom_reclassification_sub_a.PNG
-   :align: center
-   :width: 900
-   :alt: reclassifying subA
 
 Reclassification can be done in two different ways; By manually assigning your source and target land classes or by uploading a reclassification matrix.
 
@@ -283,10 +276,10 @@ Uploading a reclassification matrix
 .. tip:: The target values must match the UN-SEAA classes codes for sub-indicator A (click on the info button at the top of the table for information on how the SEEA classes are coded).
 
 
-.. image:: ../_static/sepal/reclassification_sub_b.PNG
+.. image:: ../_static/sepal/updates_26/reclassify_sub_a.png
    :align: center
    :width: 900
-   :alt:  Uploading a reclassification matrix
+   :alt: reclassifying subA
 
 
 - Clicking on :guilabel:`load` will automatically reclassify your land cover legend .
@@ -322,6 +315,13 @@ This step allows you to reclassify the legend of your land cover map for computi
 
 For this reason, this step allows users to apply a new reclassification, or alternatively, use the same reclassification rules defined in Sub-Indicator A. In the latter case,you can access the the reclassification matrix you created and saved earlier by clicking the upload button amnd choosing the file. For both cases, the land cover reclassification rules must be a :code:`.CSV` file, following the same method as in the prior step.
 
+
+.. image:: ../_static/sepal/updates_26/reclassify_sub_b.png
+   :align: center
+   :width: 900
+   :alt: reclassifying sub_b
+
+
 Check the :ref:`Annex <Annex>` for a template that can be modified for your land cover legend.
 
 
@@ -350,16 +350,16 @@ Modifying the default transition matrix for use with global land cover data
 SEPAL-SDG 15.4.2 allows users to modify the default land cover transition matrix without providing a custom land cover map. This enables national authorities to adapt the transition matrix to their local context, better capturing the main land degradation processes occurring in the country while continuing to use the default global land cover data.
 
 
-- .This can be done selecting :guilabel:`Yes` to the second question of the land cover dataset questionnaire, and then clicking on :guilabel:`Open Parameter Settings`.
+- This can be done by selecting :guilabel:`No` to the first question  and :guilabel:`Yes` to the second question of the land cover dataset questionnaire, and then clicking on :guilabel:`Open Parameter Settings`.
 
-.. image:: ../_static/sepal/default_lc_custom_tm.PNG
+.. image:: ../_static/sepal/updates_26/default_lc_custom_matrix.png
    :align: center
    :width: 900
    :alt: Reclassify table
 
 - This will open a pop-up window including the default land cover transitions matrix, showing positive land cover transitions in green, negative in red, and stable/neutral transitions in blue. The matrix can be directly modified by clicking on each cell and changing the sign of the transition.
 
-.. image:: ../_static/sepal/transition_matrix_modify.PNG
+.. image:: ../_static/sepal/updates_26/modifying_transition_matrix.png
    :align: center
    :width: 900
    :alt: Reclassify table
@@ -377,7 +377,7 @@ Indicators Settings
 
 Once the area of interest, land cover data, reclassification rules, and transition matrix have been configured,  click the **Indicator Settings**  in the process drawers to set the parameters required for the computation of both sub-indicators.
 
-.. image:: ../_static/sepal/defining_indicator_settings.PNG
+.. image:: ../_static/sepal/updates_26/indicator_settings.png
    :align: center
    :width: 900
    :alt: Reclassify table
@@ -389,34 +389,28 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **1. Click on the add layer icon (highlighted in red) to define the computational years**
 
-.. image:: ../_static/sepal/adding_reporting_years.PNG
+.. image:: ../_static/sepal/updates_26/subA_add_layer_icon.png
    :align: center
    :width: 800
    :alt: Indicator settings
 
 **2. In the pop-up window, link each land cover map — whether default or custom — to its corresponding reference year. You can report on one or multiple years. To add additional reporting years, click the + button** 
 
-.. image:: ../_static/sepal/defining_reporting_years_subA.PNG
+.. image:: ../_static/sepal/updates_26/sub_a_defining_years.png
    :align: center
    :width: 500
-   :alt: Reclassify table
+   :alt: Defining computational years
 
 
 .. note::  The reporting years for sub-indicator A are every five years from the baseline i.e. 2000, 2005, 2010, 2015 and subsequently every three years (2018, 2021, 2024,...).If your custom national land cover maps are not annually updated and do not exactly match the reporting years — for example, if you have a land cover map for 2004 instead of 2005 — the tool will automatically interpolate values for the missing reporting years based on the available land cover data.
 
-.. image:: ../_static/sepal/multiple_years.PNG
-   :align: center
-   :width: 350
-   :alt: Defining Multiple Years
-
 
 **3. Click OK . The list of reporting years will now be listed at the bottom of the sub-Iidicator A box.**
 
-.. image:: ../_static/sepal/defining_years_subA.PNG
+.. image:: ../_static/sepal/updates_26/sub_indicator_interpolation.png
    :align: center
-   :width: 1000
-   :alt: Reclassify table
-
+   :width: 350
+   :alt: Interpolation
  
 
 Defining parameters for Sub-Indicator B: Proportion of Degraded Mountain Land.
@@ -425,14 +419,10 @@ Unlike sub-indicator A, sub-indicator B first calculates the extent of degraded 
 
 **1. Define the land cover maps for the baseline years 2000 and 2015 by linking each of the land maps to their corresponding reference year. If your custom national land cover maps do not exactly match the baseline reporting years, select the map whose reference year is closest to the required reporting year. For example, a land cover map for 1998 could be used for the reporting year 2000.**
 
-.. image:: ../_static/sepal/baseline_definition.PNG
-   :align: center
-   :width: 500
-   :alt: Reclassify table
 
 **2. Then define the land cover maps for each of the reporting years and click :guilabel:`OK` to compute.**
 
-.. image:: ../_static/sepal/reporting_definition.PNG
+.. image:: ../_static/sepal/updates_26/sub_b_indicator_settings.png
    :align: center
    :width: 500
    :alt: Reclassify table
@@ -442,7 +432,7 @@ Calculation of SDG Indicator 15.4.2
 -----------------------------------
 Once the parameters of each sub-indicator are set, the tool is now ready to run as shown below:
 
-.. image:: ../_static/sepal/defining_reporting_years_results.PNG
+.. image:: ../_static/sepal/updates_26/indicator_settings_defined.png
    :align: center
    :width: 1300
    :alt: Sub-indicator computations.
@@ -451,12 +441,16 @@ Once the parameters of each sub-indicator are set, the tool is now ready to run 
 
    By default ,SEPAL-SDG 15.4.2 calculates indicator values assuming planimetric area methods . To calculate indicator values using the real surface area method (a method that takes into account the third dimension of mountain surfaces through the use of digital elevation models and is known to derive closer estimates of the real surface area of mountain regions), click on "Use Real Surface Area" in the Advanced options . Additionally , users can direct computation in Earth Engine (Run in EE background) or modify the processing scale by defining them in the Advanced Options as well.
 
+   .. image:: ../_static/sepal/updates_26/advanced_options.png
+      :align: center
+      :width: 400
+      :alt: Sub-indicator computations.
+
 **1. Click on the :guilabel:`Calculate Indicator` to initiate the computation.**
 
 **2.Once completed, the module should display the following :**
 
-
-.. image:: ../_static/sepal/mgci_results_processing.PNG
+.. image:: ../_static/sepal/updates_26/computation_success.png
    :align: center
    :width: 1300
    :alt: Reclassify table
@@ -468,7 +462,7 @@ Once the parameters of each sub-indicator are set, the tool is now ready to run 
 
 3. The entire analysis is done "on the fly” .To export the results, click  :guilabel:`Export Reporting Tables` , a message will appear indicating the location of the exported files once complete.
 
-.. image:: ../_static/sepal/exporting_results.PNG
+.. image:: ../_static/sepal/updates_26/exporting_reporting_tables.png
    :align: center
    :width: 800
    :alt:  Exporting Reporting table
@@ -477,14 +471,14 @@ Calculation from Task
 ^^^^^^^^^^^^^^^^^^^^^
 As explained in earlier sections, SEPAL runs on Google Earth Engine (GEE), and as a result, the computation of SDG Indicator 15.4.2 is subject to GEE resource limitations. One such limitation is the computation timeout (see `computation time out <https://developers.google.com/earth-engine/guides/debugging#timed-out>`_) ,whereby any computation that takes more than five minutes will throw an exception. To overcome this, the process will be automatically executed as a GEE task —an operation capable of running beyond the standard timeout limit. If the computation is submitted as a task, a message similar to the one shown in the image below will appear.
 
-.. image:: ../_static/sepal/tasks_notification.PNG
+.. image:: ../_static/sepal/updates_26/processing_indicators_progress.png
    :align: center
    :width: 1200
    :alt: Calculation from Task Notification
 
 A new file containing the task ID is created and stored in the ../module_results/sdg_indicators/mgci/tasks folder. This file allows you to track the status of the task at any time. Alternatively, you can monitor progress using the GEE task tracker (shown above), which displays all tasks currently running on the server.
 
-.. image:: ../_static/sepal/tasks_tab.PNG
+.. image:: ../_static/sepal/updates_26/GEE_calculation_task.png
    :width: 400
    :align: center
    :alt: Computation in GEE
@@ -494,13 +488,13 @@ A new file containing the task ID is created and stored in the ../module_results
 
 We start by locating the tasking file within SEPAL using the navigator , initiated by clicking on the select file button, and then  Download and Export Tables button .The computation then proceeds as normal , displaying the results dashboard once completed. To locate the tasks manually, navigate to the File Layer > Downloads > Module results> Tasks as shown below.
 
-.. image:: ../_static/sepal/locating_task_file.PNG
+.. image:: ../_static/sepal/updates_26/export_from_task.png
    :align: center
    :width: 900
    :alt: Locating the task file
 
 
-Visualizing the results
+Visualising the results
 -----------------------
 
 SEPAL-SDG 15.4.2 provides two ways to visualise and access the computed results : 
@@ -518,15 +512,9 @@ Once the computation is complete, the results are automatically saved to the SEP
 
 **1. To locate the tables within SEPAL, navigate to the Files Tab , located in the left panel .Navigate to  Module results > sdg_indicators > 15.4.2 > reports , you should see your table under MGCI reports as shown below:**
 
-
-.. image:: ../_static/sepal/locating_exported_results.png
-   :align: center
-   :width: 900
-   :alt: Locating Exported Tables
-
 **2. To download the report from the SEPAL workspace, click on the report to activate the download icon , found in the top left side of the screen.**
 
-.. image:: ../_static/sepal/downloading_export_report.png
+.. image:: ../_static/sepal/updates_26/exporting_file.png
    :align: center
    :width: 900
    :alt: Downloading Exported Tables
@@ -546,28 +534,27 @@ Visualising the results through the MGCI Results Drawer
 SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly within the module. Interactive dashboards are generated to display the results for both sub-indicators . Additionally users can add layers to the map  and download needed layers . To navigate the results panel ,
 
 
-**1.	Click on the "Results" located in the process drawer on the left, to open the Results panel.**
+**1. Click on the "Results" located in the process drawer on the left, to open the Results panel.**
 
-.. image:: ../_static/sepal/results_drawer.PNG
+.. image:: ../_static/sepal/updates_26/results_panel.png
    :align: center
-   :width: 1200
+   :width: 700
    :alt: Results drawer
 
 **2. To map the computational layers including the disaggregated land cover maps , select a layer from the Layer List , then click on "Add Layer."**
 
-.. image:: ../_static/sepal/results_mapped.PNG
+.. image:: ../_static/sepal/updates_26/visualizing_lc_layer.png
    :align: center
-   :width: 1200
-   :alt:   Visualization
+   :width: 600
+   :alt:   Visualizing computational layers
 
 **3. To download a layer , choose the layer of interest in the layer list , then click on "Export Layer."**
 
-.. image:: ../_static/sepal/sub_a_results.PNG
+.. image:: ../_static/sepal/updates_26/visualizing_lc_layer.png
    :align: center
    :width: 800
-   :alt: Visualizing Sub_Indicator_A
+   :alt: Downloading layers
 
-**3. To download a layer , choose the layer of interest in the layer list , then click on "Export Layer."**
 
   
 .. _Annex:
