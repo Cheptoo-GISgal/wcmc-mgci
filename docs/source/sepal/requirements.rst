@@ -44,8 +44,9 @@ GEE allows users to upload several types of data including shapefiles, raster im
 
 .. image:: ../_static/sepal/uploading_data.PNG
    :align: center
-   :width: 600
+   :width: 700
    :alt: GEE_Interface
+
 
 2. Clicking the  **New** button will list the acceptable file options, including **Raster** (Geotiffs or TFRecords), **Vector** (Shapefiles) and **Data tables** (CSV files), which will be described in the following subsections.
 
@@ -70,7 +71,7 @@ Any file errors will be highlighted by the uploader, as in the example below:
 
 .. image:: ../_static/sepal/vector_error_warning.PNG
    :align: center
-   :width: 500
+   :width: 400
    :alt: Vector_Error
 
 3. Once all files are loaded correctly, the upload progress is displayed in the task manager. Typically this process takes a couple of minutes depending on the size of the dataset. The progress of the upload is displayed in the task manager as shown below:
@@ -84,7 +85,7 @@ Any file errors will be highlighted by the uploader, as in the example below:
 
 .. image:: ../_static/sepal/vector_asset_list.PNG
    :align: center
-   :width: 700
+   :width: 300
    :alt: Assets_listed
 
 5. Clicking on the asset will open an asset details window ; The asset is ready for use. You can now visualize, share or delete it accordingly.
@@ -122,7 +123,7 @@ To create an Image Collection;
 
 1. Click on the **Assets Tab** and then New > **Image collection.**
 
-2. This will open the image collection constructor that will first prompt you to name your image collection as shown below:
+2. This will open the image collection constructor that will prompt you to name your image collection as shown below:
 
 .. image:: ../_static/sepal/naming_image_collection.png
    :align: center
@@ -133,7 +134,7 @@ To create an Image Collection;
 3. Once the image collection is created, you can load it by pasting an Earth Engine asset ID into the Image Collection constructor (Ensure the **Edit** button is on) or by simply dragging individual assets to the image collection in the assets list as shown below:
 
 4. Repeat this for each asset. Clicking on the Image Collection (in the asset list) should now show all the images that are contained in that collection and should now be ready to be used in your analysis or visualization.
- 
+
 .. image:: ../_static/sepal/image_collection_result.png
    :align: center
    :width: 700
@@ -169,7 +170,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
    
 .. image:: ../_static/sepal/updates_26/vector_file_manager.png
    :align: center
-   :width: 400
+   :width: 600
    :alt: Vector File Manager Interface
 
 3. Clicking on the drop down arrow allows you to select the table type.(Accepted formats are shapefiles :code:`.shp` and table file :code:`.csv`)
@@ -177,16 +178,18 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
     
 .. image:: ../_static/sepal/updates_26/uploading_shapefiles.png
    :align: center
-   :width: 300
+   :width: 600
    :alt:   Uploading Vector Files.
+
+The process is same for tables :
 
 .. image:: ../_static/sepal/updates_26/uploading_tables.png
    :align: center
-   :width: 300
-   :alt:   Uploading Vector Files.
+   :width: 600
+   :alt:   Uploading tabular Files.
 
 
-5. The vector file manager notifies you when the importation is complete and shows its location as follows:
+5. The vector file manager notifies you when the importation is complete.
    
 .. image:: ../_static/sepal/importation_complete.PNG
    :align: center
@@ -194,15 +197,13 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
    :alt: Vector File Upload Notification
 
 
-6. To locate the file you just uploaded into SEPAL, Click on the Module_Results > AOI in the Home page:
+6. To locate the uploaded files, click on the Module_Results > AOI in the Home page:
    
 .. image:: ../_static/sepal/vector_location.PNG
    :align: center
-   :width: 450
+   :width: 400
    :alt: Vector File Location
 
-
-The vector files you just uploaded are now within the SEPAL environment and can be used when required.
 
 
 .. seealso:: The methods explained above should suffice for our case. However,since SEPAL’s built-in tools for uploading and downloading are limited, large amounts of data should be uploaded or downloaded using an FTP solution.More on this can be found `here <https://docs.sepal.io/en/latest/setup/filezilla.html#>`_.
