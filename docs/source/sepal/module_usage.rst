@@ -540,7 +540,7 @@ SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly wi
 
 **3. To download a layer, choose the layer of interest in the layer list, then click on "Export Layer."**
 
-.. image:: ../_static/sepal/updates_26/visualizing_lc_layer.png
+.. image:: ../_static/sepal/updates_26/visualizing _layers_results.png
    :align: center
    :width: 800
    :alt: Downloading layers
