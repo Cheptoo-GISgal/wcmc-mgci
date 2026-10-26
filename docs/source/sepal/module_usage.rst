@@ -533,7 +533,7 @@ SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly wi
 
 **2. To map the computational layers including the disaggregated land cover maps, select a layer from the Layer List, then click on "Add Layer."**
 
-.. image:: ../_static/sepal/updates_26/visualizing_lc_layer.png
+.. image:: ../_static/sepal/updates_26/visualizing _layers_results.png
    :align: center
    :width: 600
    :alt:   Visualizing computational layers
@@ -544,6 +544,7 @@ SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly wi
    :align: center
    :width: 800
    :alt: Downloading layers
+
 
 
   
