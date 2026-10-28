@@ -533,17 +533,32 @@ SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly wi
 
 **2. To map the computational layers including the disaggregated land cover maps, select a layer from the Layer List, then click on "Add Layer."**
 
-.. image:: ../_static/sepal/updates_26/visualizing _layers_results.png
+.. image:: ../_static/sepal/updates_26/visualizing_layers_results.png
    :align: center
    :width: 600
    :alt:   Visualizing computational layers
 
 **3. To download a layer, choose the layer of interest in the layer list, then click on "Export Layer."**
 
-.. image:: ../_static/sepal/updates_26/visualizing _layers_results.png
+.. image:: ../_static/sepal/updates_26/exporting_layers.png
    :align: center
    :width: 800
-   :alt: Downloading layers
+   :alt: Exporting layers
+
+**4.  Click on "Show Dashboard" under Sub-indicator A to display the Mountain Green Cover Index (MGCI) for each reporting year,disaggregated by bioclimatic belts, together with the land cover composition.**
+
+.. image:: ../_static/sepal/updates_26/Sub_A_Results_dashboard.png
+   :align: center
+   :width: 800
+   :alt: Sub-Indicator A dashboard
+
+**5. Sub-indicator B uses a Sankey diagram to show the transitions between land cover classes, in km\ :sup:`2`, for the each computed year and bioclimatic belt.
+
+.. image:: ../_static/sepal/updates_26/Sub_B_Results_dashboard.png
+   :align: center
+   :width: 800
+   :alt: Sub-Indicator B dashboard
+
 
 
 
