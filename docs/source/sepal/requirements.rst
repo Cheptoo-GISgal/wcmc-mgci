@@ -170,7 +170,7 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
    
 .. image:: ../_static/sepal/updates_26/vector_file_manager.png
    :align: center
-   :width: 700
+   :width: 850
    :alt: Vector File Manager Interface
 
 3. Clicking on the drop down arrow allows you to select the table type.(Accepted formats are shapefiles :code:`.shp` and table file :code:`.csv`)
@@ -178,14 +178,14 @@ Apart from Google Earth Engine,you can directly upload your tabular datasets ( v
     
 .. image:: ../_static/sepal/updates_26/uploading_shapefiles.png
    :align: center
-   :width: 700
+   :width: 850
    :alt:   Uploading Vector Files.
 
 The process is same for tables :
 
 .. image:: ../_static/sepal/updates_26/uploading_tables.png
    :align: center
-   :width: 700
+   :width: 850
    :alt:   Uploading tabular Files.
 
 
@@ -193,7 +193,7 @@ The process is same for tables :
    
 .. image:: ../_static/sepal/importation_complete.PNG
    :align: center
-   :width: 1500
+   :width: 1700
    :alt: Vector File Upload Notification
 
 
@@ -201,7 +201,7 @@ The process is same for tables :
    
 .. image:: ../_static/sepal/vector_location.PNG
    :align: center
-   :width: 400
+   :width: 700
    :alt: Vector File Location
 
 
