@@ -552,7 +552,7 @@ SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly wi
    :width: 800
    :alt: Sub-Indicator A dashboard
 
-**5. Sub-indicator B uses a Sankey diagram to show the transitions between land cover classes, in km\ :sup:`2`, for the each computed year and bioclimatic belt.
+**5. Sub-indicator B uses a Sankey diagram to show the transitions between land cover classes, in km\ :sup:`2`, for the each computed year and bioclimatic belt. Hovering over the sankey will display area changes.**
 
 .. image:: ../_static/sepal/updates_26/Sub_B_Results_dashboard.png
    :align: center
