@@ -29,14 +29,14 @@ To open the SEPAL-SDG 15.4.2 module , click on the **apps tab** and search for t
   
 .. image:: ../_static/sepal/updates_26/finding_sepal.png
    :align: center
-   :width: 1100
+   :width: 1350
    :alt: Accessing_module
 
 The module's interface is divided into two main sections as shown below:
 
 .. image:: ../_static/sepal/updates_26/sepal_main_interface.png
    :align: center
-   :width: 1100
+   :width: 1350
    :alt: Accessing_module
 
 - **Process drawers**: Located on the top left of the interface , the process drawers contain the processing steps to run the module. In SEPAL-SDG 15.4.2 , this is composed by 4 processing steps: Area of interest; Land cover settings; Indicator settings and Results.
@@ -54,7 +54,7 @@ Users can choose between a dark or light theme. To change the theme, click the t
 
 .. image:: ../_static/sepal/updates_26/Theme_customization.png
    :align: center
-   :width: 850
+   :width: 900
    :alt: Module_personalization
 
 
@@ -77,8 +77,8 @@ Overview of Sub-Indicator 15.4.2a : Mountain Green Cover Index (MGCI)
 **Sub-indicator 15.4.2a, Mountain Green Cover Index (MGCI)**, is designed to measure the extent and changes of green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – in mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year. The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems. 
 
 .. math::
-    
-   MGCI = \frac{\text{Mountain Green Cover Area}_n}{\text{Total Mountain Area}}
+
+   MGCI = \frac{\text{Mountain Green Cover Area}_n}{\text{Total Mountain Area}} \times 100
 
 Where: 
 
