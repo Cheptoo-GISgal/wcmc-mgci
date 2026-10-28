@@ -122,9 +122,9 @@ A pop-up will display the following available options to set your AOI:
 - Administrative definitions
 - Custom layers
 
-.. image:: ../_static/sepal/updates_26/defining_aoi_options.png
+.. image:: ../_static/sepal/updates_26/Aoi_selector.png
    :align: center
-   :width: 400
+   :width: 600
    :alt: Defining_AOI
 
 
@@ -135,16 +135,16 @@ A pop-up will display the following available options to set your AOI:
 
 .. image:: ../_static/sepal/updates_26/aoi_method_countries.png
    :align: center
-   :width: 500
+   :width: 600
    :alt: selecting_nepal
 
 
 - Clicking on the **Select Area of Interest (AOI)** will display your selection on the map area alongside a corresponding legend.The algorithm automatically generates a legend based on the four mountain bioclimatic belt classes and the area for each as defined in the global mountain map developed by FAO to compute this indicator.
 
-.. image:: ../_static/sepal/updates_26/AOI_display.png
+.. image:: ../_static/sepal/updates_26/AOI_displayed.png
    :align: center
    :width: 600
-   :alt: displaying_nepal
+   :alt: displaying_AOI
 
 .. warning:: The  administrative boundaries available SEPAL-SDG 15.4.2 are extracted from the FAO Global Administrative Unit Layers (GAUL,2015) dataset. The designations employed in the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the United Nations Secretariat concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. 
 
@@ -159,7 +159,7 @@ A pop-up will display the following available options to set your AOI:
 
 .. image:: ../_static/sepal/updates_26/aoi_method_gee.png
    :align: center
-   :width: 500
+   :width: 600
    :alt: Defining AOI using GEE Asset
 
 
@@ -177,7 +177,7 @@ Defining your land cover dataset
 
 .. image:: ../_static/sepal/updates_26/landcover_questionnaire.png
    :align: center
-   :width: 500
+   :width: 700
    :alt: land cover module
 
 
@@ -210,13 +210,13 @@ Using Custom Land cover maps
 - This opens a new pop-up window that allows you to select your land cover maps as a GEE asset (remember that they must be stored as a `GEE image collection <https://developers.google.com/earth-engine/guides/ic_creating>`_ to be imported.Individual images will not be recognized by the app). Use the bottom arrow to choose your asset or copy/paste it directly from GEE. Then click on **Get classes**
 
 .. image:: ../_static/sepal/updates_26/custom_lc_selection.png
-   :width: 500
+   :width: 700
    :alt: custom_landcover map
 
 .. note:: Choosing Yes in the first question and No in the second, will have the model assume that the selected land cover map is already classified according to the UN-SEEA classification and it will use the default transition matrix. In some cases, national authorities might opt to use the default land cover map but still define a custom transition matrix to capture local degradation characteristics. More on this will be described in the next section.
 
 .. image:: ../_static/sepal/updates_26/custom_lc_default_reclass.png
-   :width: 500
+   :width: 700
    :alt: custom_landcover_default_transition.
 
 
@@ -266,7 +266,7 @@ Uploading a reclassification matrix
 
 .. image:: ../_static/sepal/updates_26/reclassify_sub_a.png
    :align: center
-   :width: 500
+   :width: 700
    :alt: reclassifying subA
 
 
@@ -398,7 +398,7 @@ Defining parameters for Sub-indicator A: Mountain Green Cover Index
 
 .. image:: ../_static/sepal/updates_26/sub_indicator_interpolation.png
    :align: center
-   :width: 350
+   :width: 500
    :alt: Interpolation
  
 
@@ -413,7 +413,7 @@ Unlike sub-indicator A, sub-indicator B first calculates the extent of degraded 
 
 .. image:: ../_static/sepal/updates_26/sub_b_indicator_settings.png
    :align: center
-   :width: 500
+   :width: 550
    :alt: Reclassify table
 
 
@@ -479,7 +479,7 @@ We start by locating the tasking file within SEPAL using the navigator , initiat
 
 .. image:: ../_static/sepal/updates_26/export_from_task.png
    :align: center
-   :width: 900
+   :width: 1000
    :alt: Locating the task file
 
 
@@ -501,12 +501,12 @@ Once the computation is complete, the results are automatically saved to the SEP
 
 **1. To locate the tables within SEPAL, navigate to the Files Tab, located in the left panel. Navigate to Module results > sdg_indicators > 15.4.2 > reports, you should see your table under MGCI reports as shown below:**
 
-**2. To download the report from the SEPAL workspace, click on the report to activate the download icon, found in the top left side of the screen.**
-
 .. image:: ../_static/sepal/updates_26/exporting_file.png
    :align: center
-   :width: 900
+   :width: 1200
    :alt: Downloading Exported Tables
+
+**2. To download the report from the SEPAL workspace, click on the report to activate the download icon, found in the top left side of the screen.**
 
 **3. Once the report is downloaded, you can visualise the results of the computation as seen below:**
 
@@ -528,35 +528,35 @@ SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly wi
 
 .. image:: ../_static/sepal/updates_26/results_panel.png
    :align: center
-   :width: 700
+   :width: 800
    :alt: Results drawer
 
 **2. To map the computational layers including the disaggregated land cover maps, select a layer from the Layer List, then click on "Add Layer."**
 
 .. image:: ../_static/sepal/updates_26/visualizing_layers_results.png
    :align: center
-   :width: 600
+   :width: 800
    :alt:   Visualizing computational layers
 
 **3. To download a layer, choose the layer of interest in the layer list, then click on "Export Layer."**
 
 .. image:: ../_static/sepal/updates_26/exporting_layers.png
    :align: center
-   :width: 800
+   :width: 900
    :alt: Exporting layers
 
 **4.  Click on "Show Dashboard" under Sub-indicator A to display the Mountain Green Cover Index (MGCI) for each reporting year,disaggregated by bioclimatic belts, together with the land cover composition.**
 
 .. image:: ../_static/sepal/updates_26/Sub_A_Results_dashboard.png
    :align: center
-   :width: 800
+   :width: 900
    :alt: Sub-Indicator A dashboard
 
-**5. Sub-indicator B uses a Sankey diagram to show the transitions between land cover classes, in km\ :sup:`2`, for the each computed year and bioclimatic belt. Hovering over the sankey will display area changes.**
+**5. Sub-indicator B uses a Sankey diagram to show the transitions between land cover classes, in km2, for the each computed year and bioclimatic belt. Hovering over the sankey will display area changes.**
 
 .. image:: ../_static/sepal/updates_26/Sub_B_Results_dashboard.png
    :align: center
-   :width: 800
+   :width: 900
    :alt: Sub-Indicator B dashboard
 
 
