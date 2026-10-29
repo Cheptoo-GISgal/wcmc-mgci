@@ -1,13 +1,9 @@
-
 SEPAL-SDG 15.4.2
 ================
 
-*A tool to support the computation of SDG 15.4.2 sub-indicators : (a) Mountain Green Cover Index and (b) Proportion of degraded mountain land using SEPAL (System for Earth Observation Data Access, Processing, and Analysis for Land Monitoring).*
+SEPAL-SDG 15.4.2
 
-This guide provides step-by-step instructions on setting up and using SEPAL-SDG 15.4.2 to compute both sub-indicators. Screenshots, hints and tips are included throughout for better comprehension.
-
-General Information
--------------------
+The SEPAL-SDG 15.4.2 tool has been developed by FAO to help national authorities compute and report against SDG Indicator 15.4.2. 
 
 About SEPAL-SDG 15.4.2 
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -38,5 +34,3 @@ Contents
    requirements
    sources
    module_usage
-
-
