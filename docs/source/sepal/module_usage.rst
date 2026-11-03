@@ -4,24 +4,6 @@ The SEPAL interface and the SEPAL-SDG 15.4.2
 New SEPAL users are recommended to look over the interface and familiarize themselves with the SEPAL interface, main tools, functionalities and workflows. A detailed description of the features can be consulted in the `SEPAL documentation <https://docs.sepal.io/en/latest/setup/presentation.html#sepal-interface>`_.
 
 
-Setting up a SEPAL Instance
-----------------------------
-
-Some applications in SEPAL make use of instances to run analyses; running them will use your SEPAL computing resources. Selecting an app automatically initiates the process, starting the smallest instance to run the SEPAL sandbox. However, in some cases, especially where more powerful processing is required, you might need larger instances. For this reason, you may need to manually set up a larger SEPAL instance before running the modules. To set up an instance:
-
-1. Go to the `SEPAL terminal <https://docs.sepal.io/en/latest/setup/presentation.html#terminal>`_ (blue icon in the left panel in the image below) and wait for the instance selector to start.
-
-.. image:: ../_static/sepal/setting_instances.png
-   :align: center
-   :width: 400
-   :alt: Setting_instances
-
-2. Type the instance name e.g. t1, m2 or m4 then press ENTER.
-3. Wait for the instance to finish loading.
-4. Once completed, go back to the dashboard of the application to launch your app. It will automatically use the instance you have set.
-
-**SEPAL-SDG 15.4.2 doesn't require any additional instances to run**.
-
 Accessing SEPAL-SDG 15.4.2 
 ----------------------------
 
