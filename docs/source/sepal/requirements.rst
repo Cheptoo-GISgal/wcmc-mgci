@@ -161,52 +161,6 @@ Tabular data can be uploaded into Google Earth Engine as comma-separated values 
    Once uploaded in GEE , and the connection between the two accounts established , the assets are available and accessible from SEPAL. They can be selected from the dropdown or  by pasting the assets ID directly from GEE when prompted in SEPAL-SDG 15.4.2 .
 
 
-.. _Vector_File_Manager:
-
-Uploading Vector Files into SEPAL via the Vector File Manager.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Apart from Google Earth Engine,you can directly upload your tabular datasets ( vector or CSV tables) into the SEPAL environment through the Vector File Manager.Find more information on the `Vector File Manager here <https://docs.sepal.io/en/latest/modules/dwn/vector_manager.html>`_.
-
-2. Selecting the app opens the **Vector file manager** (as shown below):
-   
-.. image:: ../_static/sepal/updates_26/vector_file_manager.png
-   :align: center
-   :width: 850
-   :alt: Vector File Manager Interface
-
-3. Clicking on the drop down arrow allows you to select the table type.(Accepted formats are shapefiles :code:`.shp` and table file :code:`.csv`)
-4. Choose the shapefile option and click on the :code:`📎` icon to navigate to your files and choose all appropriate files and click :guilabel:`Import`.
-    
-.. image:: ../_static/sepal/updates_26/uploading_shapefiles.png
-   :align: center
-   :width: 850
-   :alt:   Uploading Vector Files.
-
-The process is same for tables :
-
-.. image:: ../_static/sepal/updates_26/uploading_tables.png
-   :align: center
-   :width: 850
-   :alt:   Uploading tabular Files.
-
-
-5. The vector file manager notifies you when the importation is complete.
-   
-.. image:: ../_static/sepal/importation_complete.PNG
-   :align: center
-   :width: 1700
-   :alt: Vector File Upload Notification
-
-
-6. To locate the uploaded files, click on the Module_Results > AOI in the Home page:
-   
-.. image:: ../_static/sepal/vector_location.PNG
-   :align: center
-   :width: 700
-   :alt: Vector File Location
-
-
 
 .. seealso:: The methods explained above should suffice for our case. However,since SEPAL’s built-in tools for uploading and downloading are limited, large amounts of data should be uploaded or downloaded using an FTP solution.More on this can be found `here <https://docs.sepal.io/en/latest/setup/filezilla.html#>`_.
 
