@@ -46,7 +46,14 @@ Users can choose between an automatic, a dark or a light theme. The automatic th
 
 **Language selection:**
 
-SEPAL-SDG 15.4.2 is currently only available in English. New language versions will be made available soon. 
+SEPAL-SDG 15.4.2 is available in English, French and Spanish. To change the language, click the language button (**EN**) at the bottom left panel, next to the theme icon, and select a language. The module changes the language immediately.
+
+.. image:: ../_static/sepal/updates_26/language_selection.png
+   :align: center
+   :width: 400
+   :alt: Language selection
+
+.. note:: The reporting tables, the default names of the exported layers and their metadata stay in English in all languages, as SDG reporting requires.
 
 
 
@@ -125,7 +132,7 @@ A pop-up will display the following available options to set your AOI:
    :alt: selecting_nepal
 
 
-- Clicking on **Select AOI** will display your selection on the map area alongside a corresponding legend.The algorithm automatically generates a legend based on the four mountain bioclimatic belt classes and the area for each as defined in the global mountain map developed by FAO to compute this indicator. Click **Close** to see the map, or **Next** to go to the land cover dataset step.
+- Clicking on **Select AOI** will display your selection on the map area alongside a corresponding legend.The algorithm automatically generates a legend based on the four mountain bioclimatic belt classes and the area for each as defined in the global mountain map developed by FAO to compute this indicator. Click **Close** to see the map, or **Next** to go to the land cover dataset step. You can hide the bioclimatic belts and show them again in the Results panel (see :ref:`Visualising the results through the Results Panel <ResultsPanel>`).
 
 .. image:: ../_static/sepal/updates_26/AOI_displayed.png
    :align: center
@@ -514,6 +521,8 @@ Once the computation is complete, the results are automatically saved to the SEP
 .. tip:: The tables follow the standard format for SDG reporting and therefore can be used to report SDG Indicator 15.4.2 values to FAO.
 
 
+.. _ResultsPanel:
+
 Visualising the results through the Results Panel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -529,12 +538,14 @@ SEPAL-SDG 15.4.2 also allows users to visualise the computed results directly wi
 
 **2. The "Visualize layers" table lists the computational layers, including the disaggregated land cover maps, with their sub-indicator. To show a layer on the map, click on the eye icon in its row. Click on the icon again to hide the layer. The legend of the layer shows at the bottom of the map.**
 
+The first row is the **Bioclimatic belts** layer, which both sub-indicators use. It is available as soon as you select the area of interest, and it does not need the reporting years. The belts show on the map by default. Hide them to see the other layers better, as in the image below. When you select a new area of interest, the belts show again.
+
 .. image:: ../_static/sepal/updates_26/visualizing_layers_results.png
    :align: center
    :width: 800
    :alt:   Visualizing computational layers
 
-**3. To download a layer, click on the export icon in its row. The Export layers window opens with this layer selected in "Asset". Select the bands and the destination: Earth Engine asset, Google Drive or SEPAL workspace. Then check the name and the scale, and click on "Export".**
+**3. To download a layer, click on the export icon in its row. The Export layers window opens with this layer selected in "Asset". Select the bands and the destination: Earth Engine asset, Google Drive or SEPAL workspace. Then check the name and the scale, and click on "Export".** The export of a land cover or degradation layer also contains a band with the bioclimatic belts. The export of the Bioclimatic belts row contains only the belts.
 
 .. image:: ../_static/sepal/updates_26/exporting_layers.png
    :align: center
